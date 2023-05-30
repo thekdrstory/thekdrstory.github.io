@@ -1,0 +1,86 @@
+.nav_menu
+{
+    margin-top: 5%;
+    text-align: center;
+}
+
+body {
+    font-family: Helvetica;
+    background-color: #121212;
+    color: #ffffff;
+}
+
+.links
+{
+    color: #EBE066;
+}
+
+.intro_box
+{
+    color: #ffffff;
+    font-family: helvetica;
+    font-size: 1em;
+    background-color: #222657;
+    height: auto;
+    width: auto;
+    margin-left: 10%;
+    margin-right: 10%;
+    padding: 2%;
+    box-shadow: 15px 15px black;
+}
+
+h1
+{
+    color: #66CAEB;
+    margin-top: 1%;
+    margin-bottom: 1%;
+    font-size: 2em;
+}
+
+h2
+{
+    margin: 0%;
+}
+
+footer
+{
+    margin-top: 3%;
+    text-align: center;
+}
+
+/*This is info specfic for about.html*/
+.portrait
+{
+    display: block;
+    width: 100%;
+    border: 5px solid #222657;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.img_box
+{
+    color: #ffffff;
+    font-family: helvetica;
+    background-color: #222657;
+    height: auto;
+    width: 25%;
+    float: left;
+    margin-left: 10%;
+    box-shadow: 15px 10px black;
+}
+
+.bio_box
+{
+    color: #ffffff;
+    font-family: helvetica;
+    font-size: 1em;
+    background-color: #222657;
+    height: auto;
+    width: 49%;
+    float: right;
+    margin-right: 10%;
+    padding: 2%;
+    box-shadow: 15px 15px black;
+}
