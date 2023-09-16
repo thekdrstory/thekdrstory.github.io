@@ -1,133 +1,346 @@
-/* Universal CSS Styles*/
-*{
-    font-family: 'Courier New', Courier, monospace;
-    font-size: 14px;
-    color: white;
-}
-
-a {
-    color: #f3e670;
+/*Remove browser defaults*/
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    
+    --clr-primary: #2C5999;
+    --clr-lite: #E9F3FF;
+    --clr-dark: #0B162C;
+    --clr-action: #67a19c;
+    --clr-action-hover: #5b918c;
+    --clr-primary-hover: #224577;
   }
-
 body {
-    background-image: url("images/bg_128x.png");
-    background-size: auto;
+    background-color: var(--clr-lite);
+    color: var(--clr-dark);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
 }
-
-h1
-{
-    font-size: 16px;
-    font-weight: bold;
-}
-
-h2
-{
-    color: #50a5f0;
-    font-size: 20px;
-    margin-top: 0%;
-    margin-bottom: 5px;
-}
-
-h3
-{
-    margin-bottom: 3px;
-    font-size: 20px;
+.copyright {
     text-align: center;
+    display: block; /* Make it a block-level element to center it within its parent */
+    margin: 0 auto; /* Center it using auto margins */
 }
 
-/* A Grid container for more complex positions */
-.layout-container
-{
-    width: 95%;
-    margin: auto;
-    /* border: 5px solid white; */
 
-    display: grid;
-    grid-template-rows: 100px,100px,100px;
-    grid-template-columns: 100px,100px;
-    justify-content: center;
-    align-items: start;
+/*Removes link underlines*/
+header a {
+    text-decoration: none;
 }
-
-.layout-container-flex
-{
-    /* Flex control */
-    flex-direction: row;
+/*Universal Header settings*/
+header {
+    background-color: var(--clr-primary);
+    padding: 0 20px;
+    height: 70px;
     display: flex;
-    justify-content: center;
-    /* align-items: start; */
-    flex-wrap: wrap;
-    /* gap: 1em; */
+    justify-content: space-between;
 }
 
-.banner
-{
-    color: white;
-    text-align: center;
+/*Controls the left "brand" icon*/
+#brand {
+    font-weight: bold;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+}
+#brand a {
+    color: var(--clr-lite);
 }
 
-/* Generic template of a "box" */
-.box
-{
-    background-color: #00000075;
-    color: white;
-    border: 1px solid #464646b9;
-    border-radius: 5px;
-    padding: 10px 15px;
-    margin: 2px;
-    max-width: 785px;
-
+/*Controls the desktop header's navigation links*/
+ul {
+    list-style: none;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+ul a {
+    color: var(--clr-lite);
+}
+ul li {
+    padding: 5px;
+    margin-left: 30px;
+}
+/*Makes it so the links grow when you hover over it*/
+ul li:hover {
+    transform: scale(1.1);
+    transition: 0.3s;
 }
 
-/* Modified Box template for projects */
-#box-project-template
-{
-    max-width: 450px;
-    /* width: fit-content; */
-}
-
-.video
-{
-    /* flex: 1 1 auto;
-    display: flex;  */
-    /* new */
-}
-
-/* Grid Item Layout */
-#box-links
-{
+/*Home Page*/
+.role {
     display: flex;
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: calc(100vh - 95px);
+}
+.role h1 {
+    font-size: 3.3vw;
+    font-weight: normal;
+    width: 72.4%;
+}
+.role h2 {
+    font-size: 7vw;
+    margin-top:-1.8vw;
+}
+.impression {
+    display: flex;
+    flex-direction: row;
+    margin-top:-1.1vw;
+    width: 72.7%;
 }
 
-.banner
-{
-    grid-row: 1 / 1;
-    grid-column: 1/3;
-    justify-self: center;
-}
-
-.social-bar
-{
+.button-template {
+    color: var(--clr-lite);
+    background: var(--clr-action);
+    display: flex;
+    width: 200px;
+    height: 50px;
+    padding: 5px;
     text-align: center;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    border-radius: 5px;
+    cursor: pointer;
 }
 
-#box-intro
-{
-    grid-row: 1/1;
-    grid-column: 1/2;
-}
-
-.copyright
-{
+.button-template-secondary {
+    color: var(--clr-lite);
+    background: var(--clr-primary);
+    display: flex;
+    width: 200px;
+    height: 50px;
+    padding: 5px;
     text-align: center;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    border-radius: 5px;
+    cursor: pointer;
 }
 
-/* About.html */
-.img-portrait
-{
-    width: 25%;
-    border: 2px solid #2c74b3;
+.button-template-secondary:hover, .button-template-secondary:active {
+    background: var(--clr-primary-hover);
 }
 
-/*Mobile Support*/
+.button-template:hover, .button-template:active {
+    background: var(--clr-action-hover);
+    
+}
+#about-button:hover, #about-button:active {
+    background: var(--clr-primary-hover);
+}
+#about-button {
+    background: var(--clr-primary);
+    margin-left: 5px;
+    margin-right: 5px;
+}
+#video-button {
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+/*About Me*/
+.img-about-me {
+    height: 80vh;
+}
+
+/*Video*/
+.content-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+    
+}
+
+
+
+.intro {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20px;
+}
+
+.grid {
+    padding: 30px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.card .btn-text {
+    display: block;
+    padding: 5px;
+    font-weight: bold;
+    font-size: 16px;
+}
+.btn_image {
+    background-color: var(--clr-action);
+    color: var(--clr-lite);
+    border-style: none;
+    cursor: pointer;
+}
+.card:hover {
+    transform: scale(1.1);
+    transition: 0.1s;
+}
+.card img{
+    display: block;
+    width: 100%;
+}
+
+.modal {
+    padding: 20px;
+    width: 1000px;
+    margin: 0 auto; /* Center horizontally */
+    top: 50%; /* Center vertically */
+    transform: translateY(-50%); /* Adjust vertically to center */
+
+    border-style: none;
+    border-radius: 10px;
+}
+.modal::backdrop {
+    background: rgb(0 0 0 / .4);
+}
+.modal h4 {
+    padding-top: 10px;
+}
+#closeModalButton {
+    border-style: none;
+    width: 100%;
+}
+.video-preview {
+    position: relative;
+    padding-top: 56.25%; /* 16:9 aspect ratio */
+}
+.video-preview iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.btn-link-group {
+    margin-top: 10px;
+    display: flex;
+    gap: 10px;
+}
+
+/*Art*/
+#card-art:hover {
+    transform: none;
+}
+
+/*Mobile Users*/
+/*This creates the hamburger icon + mobile nav menu... credit to JavaScript Academy*/
+#hamburger-icon {
+    margin: auto 0;
+    display: none;
+    cursor: pointer;
+}
+#hamburger-icon div {
+    width: 35px;
+    height: 3px;
+    background-color: white;
+    margin: 6px 0;
+    transition: 0.4s;
+}
+.open .bar1 {
+    -webkit-transform: rotate(-45deg) translate(-6px, 6px);
+    transform: rotate(-45deg) translate(-6px, 6px);
+}
+.open .bar2 {
+    opacity: 0;
+}
+.open .bar3 {
+    -webkit-transform: rotate(45deg) translate(-6px, -8px);
+    transform: rotate(45deg) translate(-6px, -8px);
+}
+.open .mobile-menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.mobile-menu {
+    display: none;
+    position: absolute;
+    left: 0px;
+    height: calc(100vh - 51px);
+    width: 100%;
+    background-color: var(--clr-primary)
+}
+.mobile-menu li {
+    margin-bottom: 10px;
+}
+
+@media only screen and (max-width: 750px) {
+    
+    /* Universal Mobile Header*/
+    header nav {
+        display: none;
+    }
+  
+    #hamburger-icon {
+        display: block;
+    }
+
+    /*Controls Home page button*/
+    .impression {
+        flex-direction: column;
+        width: 50%;
+    }
+
+    #about-button {
+        margin-top: 5px;
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+    
+    #video-button {
+        margin-top: 5px;
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+
+    /*Controls the "Hi, how are you?"*/
+    .role h1 {
+        font-size: 4.5vw;
+        font-weight: normal;
+    }
+
+    .grid {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .btn-link-group {
+        flex-direction: column;
+    }
+
+    .content-container h1{
+        font-size: 7vw;
+    }
+
+    .img-about-me{
+    }
+
+    .content-container p {
+        font-size: 4vw;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+}

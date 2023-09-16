@@ -12,138 +12,237 @@
 
 <body>
 
-    <p class="banner">KEVIN ROSAS' VIDEO</p>
+    <header>
 
-    <nav class="social-bar">
-        <a href="https://www.instagram.com/thekdrstory/"><img src="icons/sm_insta_32x.png" alt="Instagram" /></a>
-        <a href="https://www.youtube.com/@aramids/featured"><img src="icons/sm_yt_32x.png" alt="YouTube" /></a>
-        <a href="https://www.linkedin.com/in/kevinrosas"><img src="icons/sm_ln_32x.png" alt="linkedin" /></a>
-        <a href="mailto: kdrosas480@gmail.com"><img src="icons/sm_email_32x.png" alt="Email" /></a>
-        <a href="https://github.com/thekdrstory"><img src="icons/sm_git_32x.png" alt="Github" /></a>
-    </nav>
+        <!--Logo brand template?-->
+        <div id="brand">
+            <a href="./">KEVIN ROSAS</a>
+        </div>
 
-    <div class="layout-container-flex">
-        <div class="box">
-            <h2>My Video Archive</h2>
-            <h1>I, Kevin Rosas, love working in the film industry!</h1>
-            <p>Thanks for taking an interest in my video work. Here you will find a showcase of some of the projects
-                I've had the pleasure of working on.</p>
-            <p>Included is a description of the work, my role in its production, and any miscellaneous information.
-            </p>
-            <a href="https://www.youtube.com/@aramids/featured">My YouTube Channel</a>
+        <!--This is the desktop navigation bar-->
+        <nav>
+            <ul>
+                <li><a href="./index.html">HOME</a></li>
+                <li><a href="./about.html">ABOUT</a></li>
+                <li><a href="./video.html">VIDEO</a></li>
+                <li><a href="./art.html">ART</a></li>
+            </ul>
+        </nav>
+
+        <!--This is the mobile navigation bar and what it displays when opened-->
+        <div id="hamburger-icon" onclick="toggleMobileMenu(this)">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+            <ul class="mobile-menu">
+                <li><a href="./index.html">HOME</a></li>
+                <li><a href="./about.html">ABOUT</a></li>
+                <li><a href="./video.html">VIDEO</a></li>
+                <li><a href="./art.html">ART</a></li>
+            </ul>
         </div>
-        <div class="box" id="box-links">
-            <h2>NAVIGATION</h2>
-            <a href="./">Home</a>
-            <a href="./about.html">About</a>
-            <a href="./video.html">Video</a>
-            <a href="./art.html">Art</a>
+
+    </header>
+
+    <div class="content-container">
+        <div class="intro">
+            <h1>Kevin Rosas's Videos</h1>
+            <p>Here is a collection of various videos I've worked on!</p>
+
         </div>
+
+        <div class="btn-link-group">
+            <a href="https://drive.google.com/file/d/1gJeMTMT8fR5PHbGMELdZQ8tTEewFBpE2/view?usp=drive_link"
+                class="button-template">Resume</a>
+            <a href="https://www.youtube.com/@aramids/videos" class="button-template-secondary">My YouTube Channel</a>
+        </div>
+
+        <!--Portfolio Pieces-->
+        <div class="grid">
+            <div class="card">
+                <button class="btn_image" id="popup_n64">
+                    <img src="images/video-thumbnail_n64.webp" alt="N64 Commercial">
+                    <span class="btn-text">Nintendo 64 Commercial</span>
+                </button>
+            </div>
+
+            <div class="card">
+                <button class="btn_image" id="popup_cc">
+                    <img src="images/video-thumbnail_climbing-coastside.webp" alt="girl climbing">
+                    <span class="btn-text">Climbing Coastside</span>
+                </button>
+            </div>
+
+            <div class="card">
+                <button class="btn_image" id="popup_codemy">
+                    <img src="images/video-thumbnail_codemy.webp" alt="codemy.com">
+                    <span class="btn-text">Codemy.com</span>
+                </button>
+            </div>
+
+            <div class="card">
+                <button class="btn_image" id="popup_localonly">
+                    <img src="images/video-thumbnail_locals-only.webp" alt="man paddles in ocean">
+                    <span class="btn-text">Locals Only</span>
+                </button>
+            </div>
+
+            <div class="card">
+                <button class="btn_image" id="popup_damaris1">
+                    <img src="images/video-thumbnail_damaris-1.webp" alt="cutout">
+                    <span class="btn-text">Damaris Saves The World</span>
+                </button>
+            </div>
+
+            <div class="card">
+                <button class="btn_image" id="popup_damaris2">
+                    <img src="images/video-thumbnail_damaris-2.webp" alt="cutout">
+                    <span class="btn-text">Even a Fool Learns to love...</span>
+                </button>
+            </div>
+
+            <div class="card">
+                <button class="btn_image" id="popup_coffeecomic">
+                    <img src="images/video-thumbnail_coffee-comic.webp" alt="man drinks coffee and reads comic">
+                    <span class="btn-text">Coffee and a Comic</span>
+                </button>
+            </div>
+
+            <div class="card">
+                <button class="btn_image" id="popup_pulp">
+                    <img src="images/video-thumbnail_pulp.webp" alt="man tidys up comic stand">
+                    <span class="btn-text">Pulp Fiction</span>
+                </button>
+            </div>
+
+        </div>
+
+        <!--Depending on which image is clicked, 
+            this will open the corresponding information-->
+        <dialog class="modal" id="modal">
+
+            <div id="info_n64">
+                <div class="video-preview">
+                    <iframe width="1280" height="720" src="https://www.youtube.com/embed/rRkFK3GzfCM"
+                        title="YouTube video player"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowfullscreen></iframe>
+                </div>
+                <h4>Description:</h4>
+                <p>A fake commercial that emulates the look and feel of the 1990's.</p>
+                <h4>My Role(s):</h4>
+                <p>All Production Roles</p>
+            </div>
+
+            <div id="info_cc">
+                <div class="video-preview">
+                    <iframe width="1280" height="720"
+                        src="https://www.youtube.com/embed/dpxxvmgekZ8?si=JXRtUyoWKFS5iM0i" title="YouTube video player"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowfullscreen></iframe>
+                </div>
+                <h4>Description:</h4>
+                <p>A Documentary about OCC's rockclimbing class.</p>
+                <h4>My Role(s):</h4>
+                <p>Editor</p>
+                <p>2nd Camera</p>
+                <p>Additional B-Roll</p>
+            </div>
+
+            <div id="info_codemy">
+                <div class="video-preview">
+                    <iframe width="1280" height="720"
+                        src="https://www.youtube.com/embed/bFsIXYygsg4?si=MJuUn49LG5WxiZzM" title="YouTube video player"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowfullscreen></iframe>
+                </div>
+                <h4>Description:</h4>
+                <p>Learn to code with John Elder.</p>
+                <h4>My Role(s):</h4>
+                <p>Editor</p>
+            </div>
+
+            <div id="info_localonly">
+                <div class="video-preview">
+                    <iframe width="1280" height="720"
+                        src="https://www.youtube.com/embed/SptU-_SmfH4?si=IivVqg87olRAo1_V" title="YouTube video player"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowfullscreen></iframe>
+                </div>
+                <h4>Description:</h4>
+                <p>A Documentary about local surfing terrorism.</p>
+                <h4>My Role(s):</h4>
+                <p>Editor</p>
+                <p>2nd Camera</p>
+                <p>Additional B-Roll</p>
+            </div>
+
+            <div id="info_damaris1">
+                <div class="video-preview">
+                    <iframe width="1280" height="720"
+                        src="https://www.youtube.com/embed/8OZA-DD1sDg?si=v5ARo7wtkf-mV2lK" title="YouTube video player"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowfullscreen></iframe>
+                </div>
+                <h4>Description:</h4>
+                <p>A short film submitted as the final for my Film Production 2 class.</p>
+                <h4>My Role(s):</h4>
+                <p>All Production Roles</p>
+            </div>
+
+            <div id="info_damaris2">
+                <div class="video-preview">
+                    <iframe width="1280" height="720"
+                        src="https://www.youtube.com/embed/f8KnfFDROLA?si=MC3N-oU4YEk3EUkI" title="YouTube video player"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowfullscreen></iframe>
+                </div>
+                <h4>Description:</h4>
+                <p>A short film, the sequel to "Damaris Saves The World", submitted as the final for my Film Production
+                    3 class.</p>
+                <h4>My Role(s):</h4>
+                <p>All Production Roles</p>
+            </div>
+
+            <div id="info_coffeecomic">
+                <div class="video-preview">
+                    <iframe width="1280" height="720"
+                        src="https://www.youtube.com/embed/kJ5IdQA-ar4?si=f_RK3nZ9JWAC0xpz" title="YouTube video player"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowfullscreen></iframe>
+                </div>
+                <h4>Description:</h4>
+                <p>An interview with the owner of Coffee and a Comic. It's part one of a documentary series about comic
+                    book shop owners.</p>
+                <h4>My Role(s):</h4>
+                <p>2nd Camera</p>
+                <p>B-Roll</p>
+            </div>
+
+            <div id="info_pulp">
+                <div class="video-preview">
+                    <iframe width="1280" height="720"
+                        src="https://www.youtube.com/embed/6nVCeo94ves?si=O2i5rqOzGP90xs9f" title="YouTube video player"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowfullscreen></iframe>
+                </div>
+                <h4>Description:</h4>
+                <p>An interview with the owner of Pulp Fiction Long Beach. It's part two of a documentary series about
+                    comic
+                    book shop owners.</p>
+                <h4>My Role(s):</h4>
+                <p>2nd Camera</p>
+                <p>B-Roll</p>
+            </div>
+
+            <button class="button-template-secondary" id="closeModalButton">CLOSE</button>
+        </dialog>
+
+        <small class="copyright">© Kevin Rosas 2023</small>
     </div>
 
-    <h3>EXAMPLES</h3>
-    <div class="layout-container-flex">
-        <div class="box" id="box-project-template">
-            <h2>Nintendo 64 Commercial</h2>
-
-            <div class="video">
-                <iframe width="100%" height="100%" src="https://www.youtube.com/embed/rRkFK3GzfCM"
-                    title="YouTube video player" frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    allowfullscreen></iframe>
-            </div>
-            <p>A fake commercial that emulates the look and feel of the Nintendo 64 commercials from the 90's.</p>
-            <p>- Director / Writer</p>
-            <p>- Editor</p>
-            <p>- Cinematographer</p>
-        </div>
-        <div class="box" id="box-project-template">
-            <h2>CLIMBING COASTSIDE</h2>
-            <div class="video">
-                <iframe width="100%" height="100%" src="https://www.youtube.com/embed/dpxxvmgekZ8"
-                    title="YouTube video player" frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    allowfullscreen></iframe>
-            </div>
-            <p>A Documentary about OCC's rockclimbing class. (Also serves as a promo for
-                Rockreation's Costa Mesa location)</p>
-            <p>- Editor</p>
-            <p>- Cinematographer</p>
-            <a href="https://www.instagram.com/p/Cn7vE7NAgl1/">Promo 1</a>
-            <a href="https://www.instagram.com/p/CnNLvntpKXL/">Promo 2</a>
-        </div>
-
-    </div>
-
-    <div class="layout-container-flex">
-        <div class="box" id="box-project-template">
-            <h2>COFFEE AND A COMIC</h2>
-            <div class="video">
-                <iframe width="100%" height="100%" src="https://www.youtube.com/embed/kJ5IdQA-ar4"
-                    title="YouTube video player" frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    allowfullscreen></iframe>
-            </div>
-            <p>An interiew with the owner of Coffee and a Comic. Part one of a documentary series about comic book shop
-                owners.</p>
-            <p>- 2nd Camera</p>
-            <p>- B-Roll</p>
-            <p>- Assistant Editor</p>
-            <a href="https://www.coffeeandacomic.com/about-coffee-and-a-comic">Shown on Coffee and a Comic's website</a>
-        </div>
-
-        <div class="box" id="box-project-template">
-            <h2>PULP FICTION</h2>
-            <div class="video">
-                <iframe width="100%" height="100%" src="https://www.youtube.com/embed/6nVCeo94ves"
-                    title="YouTube video player" frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    allowfullscreen></iframe>
-            </div>
-            <p>An interiew with the owner of Pulp Fiction Long Beach. Part two of a documentary series about comic
-                bookshop owners.</p>
-            <p>- 2nd Camera</p>
-            <p>- B-Roll</p>
-        </div>
-    </div>
-
-    <div class="layout-container-flex">
-
-
-        <div class="box" id="box-project-template">
-            <h2>DAMARIS SAVES THE WORLD</h2>
-            <div class="video">
-                <iframe width="100%" height="100%" src="https://www.youtube.com/embed/8OZA-DD1sDg"
-                    title="YouTube video player" frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    allowfullscreen></iframe>
-            </div>
-            <p>A short film submitted as the final for my Film Production 2
-                class.</p>
-            <p>- Director / Writer</p>
-            <p>- Editor</p>
-            <p>- Cinematographer</p>
-        </div>
-
-        <div class="box" id="box-project-template">
-            <h2>EVEN A FOOL LEARNS TO LOVE DAMARIS</h2>
-            <div class="video">
-                <iframe width="100%" height="100%" src="https://www.youtube.com/embed/f8KnfFDROLA"
-                    title="YouTube video player" frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    allowfullscreen></iframe>
-            </div>
-            <p>A short film, the sequel to "Damaris Saves The World", submitted as the
-                final for my Film Production 3 class.</p>
-            <p>- Director / Writer</p>
-            <p>- Editor</p>
-            <p>- Cinematographer</p>
-            <p>Won the Nam June Paik award for Mass Appeal 2021</p>
-        </div>
-    </div>
-
-    <p class="copyright">© Kevin Rosas 2023</p>
-
+    <script src="index.js"></script>
+    <script src="video.js"></script>
 </body>
 
 </html>

@@ -11,43 +11,44 @@
 </head>
 
 <body>
-  <p class="banner">ABOUT ME</p>
-  <nav class="social-bar">
-    <a href="https://www.instagram.com/thekdrstory/"><img src="icons/sm_insta_32x.png" alt="Instagram"></a>
-    <a href="https://www.youtube.com/@aramids/featured"><img src="icons/sm_yt_32x.png" alt="YouTube"></a>
-    <a href="https://www.linkedin.com/in/kevinrosas"><img src="icons/sm_ln_32x.png" alt="linkedin"></a>
-    <a href="mailto:kdrosas480@gmail.com"><img src="icons/sm_email_32x.png" alt="Email"></a>
-    <a href="https://github.com/thekdrstory"><img src="icons/sm_git_32x.png" alt="Github"></a>
-  </nav>
+  <header>
+    <div id="brand">
+      <a href="./">KEVIN ROSAS</a>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="./index.html">HOME</a></li>
+        <li><a href="./about.html">ABOUT</a></li>
+        <li><a href="./video.html">VIDEO</a></li>
+        <li><a href="./art.html">ART</a></li>
+      </ul>
+    </nav>
+    <div id="hamburger-icon" onclick="toggleMobileMenu(this)">
+      <div class="bar1"></div>
+      <div class="bar2"></div>
+      <div class="bar3"></div>
+      <ul class="mobile-menu">
+        <li><a href="./index.html">HOME</a></li>
+        <li><a href="./about.html">ABOUT</a></li>
+        <li><a href="./video.html">VIDEO</a></li>
+        <li><a href="./art.html">ART</a></li>
 
-  <div class="layout-container-flex">
-    <div class="box">
-      <h2>WHO AM I?</h2>
-      <img class="img-portrait" src="/images/kevin_portrait-1.jpg" alt="Kevin">
-      <p>Born in California and raised in Texas, Kevin Rosas has a passion for software creation and film
-        production.</p>
-      <p>In the tech side of things, Kevin is knowledgable in C# and Python programming. He has also picked up
-        HTML/CSS/Javascript
-        and hopes to one day become an experienced Web Developer who can help create websites for people who have no
-        clue how to even begin.
-        He posts some of his work on Github.
-      </p>
-      <p>Kevin has spent a majority of his time working on the creation of film-related content. He graduated from
-        Orange Coast
-        College in
-        May 2022 with an associates degree in Film. He has since delved into all aspects of film production to further
-        understand and aid others on his team.</p>
+      </ul>
     </div>
-    <div class="box" id="box-links">
-      <h2>NAVIGATION</h2>
-      <a href="./">Home</a>
-      <a href="./about.html">About</a>
-      <a href="./video.html">Video</a>
-      <a href="./art.html">Art</a>
+  </header>
+
+  <div class="content-container">
+    <div class="intro">
+      <h1>My Name is Kevin Rosas!</h1>
     </div>
+    <p>Based in California, I have a passion for technology and the arts.</p>
+    <p>I've dabbled in directing, screenwriting, drawing, web development (I made this site), and programming! My main
+      focus is on video editing!</p>
+
+    <img class="img-about-me" src="images/kevin_1k.jpg" alt="Kevin Rosas">
+    <small class="copyright">© Kevin Rosas 2023</small>
   </div>
-
-  <p class="copyright">© Kevin Rosas 2023</p>
+  <script src="index.js"></script>
 </body>
 
 </html>

@@ -12,45 +12,66 @@
 
 <body>
 
-    <p class="banner">KEVIN ROSAS' ART</p>
+    <header>
 
-    <nav class="social-bar">
-        <a href="https://www.instagram.com/thekdrstory/"><img src="icons/sm_insta_32x.png" alt="Instagram" /></a>
-        <a href="https://www.youtube.com/@aramids/featured"><img src="icons/sm_yt_32x.png" alt="YouTube" /></a>
-        <a href="https://www.linkedin.com/in/kevinrosas"><img src="icons/sm_ln_32x.png" alt="linkedin" /></a>
-        <a href="mailto: kdrosas480@gmail.com"><img src="icons/sm_email_32x.png" alt="Email" /></a>
-        <a href="https://github.com/thekdrstory"><img src="icons/sm_git_32x.png" alt="Github" /></a>
-    </nav>
-
-    <div class="layout-container-flex">
-
-        <div class="box">
-            <h2>My Art Archive</h2>
-            <h1>I, Kevin Rosas, love art. So here is an archive of some of my work!</h1>
+        <!--Logo brand template?-->
+        <div id="brand">
+            <a href="./">KEVIN ROSAS</a>
         </div>
-        <div class="box" id="box-links">
-            <h2>NAVIGATION</h2>
-            <a href="./">Home</a>
-            <a href="./about.html">About</a>
-            <a href="./video.html">Video</a>
-            <a href="./art.html">Art</a>
+
+        <!--This is the desktop navigation bar-->
+        <nav>
+            <ul>
+                <li><a href="./index.html">HOME</a></li>
+                <li><a href="./about.html">ABOUT</a></li>
+                <li><a href="./video.html">VIDEO</a></li>
+                <li><a href="./art.html">ART</a></li>
+            </ul>
+        </nav>
+
+        <!--This is the mobile navigation bar and what it displays when opened-->
+        <div id="hamburger-icon" onclick="toggleMobileMenu(this)">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+            <ul class="mobile-menu">
+                <li><a href="./index.html">HOME</a></li>
+                <li><a href="./about.html">ABOUT</a></li>
+                <li><a href="./video.html">VIDEO</a></li>
+                <li><a href="./art.html">ART</a></li>
+            </ul>
         </div>
+
+    </header>
+
+    <div class="content-container">
+        <div class="intro">
+            <h1>Kevin Rosas's Art</h1>
+            <p>Anything that has to do with my art will be posted here!</p>
+        </div>
+
+        <div class="grid">
+            <div class="card" id="card-art">
+                <img src="images/comic-thumbnail_WWoK-1.webp" alt="Kevin plays Weezer">
+                <span class="btn-text">Issue 1: Kevin Lives</span>
+                <span class="btn-text">04 July 2023</span>
+                <a href="https://drive.google.com/file/d/1W40aerjGeZ4MBFQEuveMAyMPwLQryyy_/view?usp=sharing"
+                    class="button-template">Read</a>
+            </div>
+
+            <div class="card" id="card-art">
+                <img src="images/comic-thumbnail_WWoK-2.webp" alt="Kevin mimics Low">
+                <span class="btn-text">Issue 2: All Time Low</span>
+                <span class="btn-text">06 August 2023</span>
+                <a href="https://drive.google.com/file/d/1g2gc--gmtd68-ET2Z7-fVVDZonFoS745/view?usp=sharing"
+                    class="button-template">Read</a>
+            </div>
+        </div>
+
+        <small class="copyright">© Kevin Rosas 2023</small>
     </div>
-
-    <h3>COMICS</h3>
-    <div class="layout-container-flex">
-        <div class="box" id="box-project-template">
-            <h2>The Weird and Wacky World of Kevin Rosas</h2>
-            <p><a href="https://drive.google.com/file/d/1Cr8hFLQxmJRlo-E99Bmcd1xnBce3iXZf/view?usp=sharing"
-                    class="link-webnav">Issue 1: "Kevin Lives" - 04 July 2023</a></p>
-            <p><a href="https://drive.google.com/file/d/1P0xwTtrmJnSflyUE7k4kfgp-J9g-pe1t/view?usp=sharing"
-                    class="link-webnav">Issue 2: "All Time Low" - 06 August 2023</a></p>
-
-        </div>
-    </div>
-
-    <p class="copyright">© Kevin Rosas 2023</p>
-
+    <script src="index.js"></script>
+    <script src="video.js"></script>
 </body>
 
 </html>

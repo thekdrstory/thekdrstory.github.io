@@ -2,43 +2,64 @@
 <html lang="en">
 
 <head>
-  <link rel="stylesheet" href="style.css" />
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Kevin Rosas</title>
   <link rel="icon" type="image/x-icon" href="/icons/public-icon.ico" />
+  <link rel="stylesheet" href="style.css" />
+  <title>Kevin Rosas</title>
 </head>
 
 <body>
 
-  <p class="banner">KEVIN ROSAS</p>
-  <nav class="social-bar">
-    <a href="https://www.instagram.com/thekdrstory/"><img src="icons/sm_insta_32x.png" alt="Instagram"></a>
-    <a href="https://www.youtube.com/@aramids/featured"><img src="icons/sm_yt_32x.png" alt="YouTube"></a>
-    <a href="https://www.linkedin.com/in/kevinrosas"><img src="icons/sm_ln_32x.png" alt="linkedin"></a>
-    <a href="mailto: kdrosas480@gmail.com"><img src="icons/sm_email_32x.png" alt="Email"></a>
-    <a href="https://github.com/thekdrstory"><img src="icons/sm_git_32x.png" alt="Github"></a>
-  </nav>
+  <!--The Universal Header (needed for all pages)-->
+  <header>
 
-  <div class="layout-container-flex">
-    <div class="box">
-      <h2>HI! HOW ARE YOU?</h2>
-      <h1>My name is Kevin Rosas.</h1>
-      <p>I am a C# programmer and web developer who also writes and edits video content. I also
-        draw sometimes.</p>
-      <p>I made this website. It is a WIP.</p>
+    <!--Logo brand template?-->
+    <div id="brand">
+      <a href="./">KEVIN ROSAS</a>
     </div>
-    <div class="box" id="box-links">
-      <h2>NAVIGATION</h2>
-      <a href="./">Home</a>
-      <a href="./about.html">About</a>
-      <a href="./video.html">Video</a>
-      <a href="./art.html">Art</a>
+
+    <!--This is the desktop navigation bar-->
+    <nav>
+      <ul>
+        <li><a href="./index.html">HOME</a></li>
+        <li><a href="./about.html">ABOUT</a></li>
+        <li><a href="./video.html">VIDEO</a></li>
+        <li><a href="./art.html">ART</a></li>
+      </ul>
+    </nav>
+
+    <!--This is the mobile navigation bar and what it displays when opened-->
+    <div id="hamburger-icon" onclick="toggleMobileMenu(this)">
+      <div class="bar1"></div>
+      <div class="bar2"></div>
+      <div class="bar3"></div>
+      <ul class="mobile-menu">
+        <li><a href="./index.html">HOME</a></li>
+        <li><a href="./about.html">ABOUT</a></li>
+        <li><a href="./video.html">VIDEO</a></li>
+        <li><a href="./art.html">ART</a></li>
+
+      </ul>
+    </div>
+
+  </header>
+  <script src="index.js"></script>
+
+  <!--The first impression located in the middle of the screen!-->
+  <div class="role">
+    <h1>Hi, How Are You? I'm Kevin Rosas</h1>
+    <h2>I AM A VIDEO EDITOR</h2>
+    <div class="impression">
+      <a href="./video.html" class="button-template" id="video-button">My Work</a>
+      <a href="./about.html" class="button-template" id="about-button">Who Am I?</a>
     </div>
   </div>
 
-  <p class="copyright">© Kevin Rosas 2023</p>
+  <small class="copyright">© Kevin Rosas 2023</small>
+
+
 </body>
 
 </html>
