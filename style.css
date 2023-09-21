@@ -4,18 +4,23 @@
     margin: 0;
     box-sizing: border-box;
     overflow-x: hidden;
-    
-    --clr-primary: #2C5999;
-    --clr-lite: #E9F3FF;
+    font-family: 'Roboto', sans-serif;
+
+    /*Lite Mode*/
+    --clr-primary: #7AA8EA;
+    --clr-lite: #eaf5fd;
     --clr-dark: #0B162C;
     --clr-action: #67a19c;
-    --clr-action-hover: #5b918c;
-    --clr-primary-hover: #224577;
+    --clr-action-hover: #91bbf5;
+
+    /*Dark Mode*/
   }
+h1 {
+    font-size: 3rem;
+}
 body {
     background-color: var(--clr-lite);
     color: var(--clr-dark);
-    font-family: Arial, Helvetica, sans-serif;
     font-size: 18px;
 }
 .copyright {
@@ -24,20 +29,19 @@ body {
     margin: 0 auto; /* Center it using auto margins */
 }
 
-
 /*Removes link underlines*/
 header a {
     text-decoration: none;
+    font-weight: bold;
 }
 /*Universal Header settings*/
 header {
     background-color: var(--clr-primary);
     padding: 0 20px;
-    height: 70px;
+    height: 95px;
     display: flex;
     justify-content: space-between;
 }
-
 /*Controls the left "brand" icon*/
 #brand {
     font-weight: bold;
@@ -46,9 +50,8 @@ header {
     align-items: center;
 }
 #brand a {
-    color: var(--clr-lite);
+    color: var(--clr-dark);
 }
-
 /*Controls the desktop header's navigation links*/
 ul {
     list-style: none;
@@ -58,16 +61,15 @@ ul {
     justify-content: space-around;
 }
 ul a {
-    color: var(--clr-lite);
+    color: var(--clr-dark);
 }
 ul li {
-    padding: 5px;
     margin-left: 30px;
 }
 /*Makes it so the links grow when you hover over it*/
 ul li:hover {
-    transform: scale(1.1);
-    transition: 0.3s;
+    transform: scale(1.2);
+    transition: 0.2s;
 }
 
 /*Home Page*/
@@ -76,73 +78,32 @@ ul li:hover {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: calc(100vh - 95px);
+    height: calc(100vh - 115px);
 }
-.role h1 {
-    font-size: 3.3vw;
-    font-weight: normal;
-    width: 72.4%;
+.role h3{
+    font-size: 2rem;
 }
-.role h2 {
-    font-size: 7vw;
-    margin-top:-1.8vw;
+.role h2{
+    font-size: 2rem;
 }
-.impression {
-    display: flex;
-    flex-direction: row;
-    margin-top:-1.1vw;
-    width: 72.7%;
-}
-
 .button-template {
-    color: var(--clr-lite);
-    background: var(--clr-action);
-    display: flex;
-    width: 200px;
-    height: 50px;
-    padding: 5px;
-    text-align: center;
-    align-items: center;
-    justify-content: center;
-    text-decoration: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-.button-template-secondary {
-    color: var(--clr-lite);
+    color: var(--clr-dark);
     background: var(--clr-primary);
+    font-weight: bold;
     display: flex;
-    width: 200px;
+    width: 150px;
     height: 50px;
     padding: 5px;
     text-align: center;
     align-items: center;
     justify-content: center;
     text-decoration: none;
-    border-radius: 5px;
     cursor: pointer;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
 }
-
-.button-template-secondary:hover, .button-template-secondary:active {
-    background: var(--clr-primary-hover);
-}
-
 .button-template:hover, .button-template:active {
     background: var(--clr-action-hover);
-    
-}
-#about-button:hover, #about-button:active {
-    background: var(--clr-primary-hover);
-}
-#about-button {
-    background: var(--clr-primary);
-    margin-left: 5px;
-    margin-right: 5px;
-}
-#video-button {
-    margin-left: 5px;
-    margin-right: 5px;
+    box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.2);
 }
 
 /*About Me*/
@@ -156,24 +117,18 @@ ul li:hover {
     flex-direction: column;
     align-items: center;
     margin-top: 20px;
-    
 }
-
-
-
 .intro {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-top: 20px;
 }
-
 .grid {
     padding: 30px;
     margin: 0 auto;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 10px;
+    gap: 5px;
 }
 .card {
     display: flex;
@@ -186,20 +141,21 @@ ul li:hover {
     font-weight: bold;
     font-size: 16px;
 }
-.btn_image {
-    background-color: var(--clr-action);
-    color: var(--clr-lite);
-    border-style: none;
-    cursor: pointer;
-}
-.card:hover {
-    transform: scale(1.1);
-    transition: 0.1s;
-}
 .card img{
     display: block;
     width: 100%;
 }
+.card:hover {
+    transform: scale(1.05);
+    transition: 0.1s;
+}
+.btn_image {
+    background-color: var(--clr-primary);
+    color: var(--clr-dark);
+    border-style: none;
+    cursor: pointer;
+}
+
 
 .modal {
     padding: 20px;
@@ -235,7 +191,7 @@ ul li:hover {
 }
 
 .btn-link-group {
-    margin-top: 10px;
+    padding: 10px;
     display: flex;
     gap: 10px;
 }
@@ -252,6 +208,7 @@ ul li:hover {
     display: none;
     cursor: pointer;
 }
+
 #hamburger-icon div {
     width: 35px;
     height: 3px;
@@ -292,7 +249,7 @@ ul li:hover {
 
 
 
-
+/*Styles for Lite YouTube Embed*/
 lite-youtube {
     background-color: #000;
     position: relative;
@@ -302,7 +259,6 @@ lite-youtube {
     background-size: cover;
     cursor: pointer;
 }
-
 /* gradient */
 lite-youtube::before {
     content: '';
@@ -317,7 +273,6 @@ lite-youtube::before {
     width: 100%;
     transition: all 0.2s cubic-bezier(0, 0, 0.2, 1);
 }
-
 /* responsive iframe with a 16:9 aspect ratio
     thanks https://css-tricks.com/responsive-iframes/
 */
@@ -334,7 +289,6 @@ lite-youtube > iframe {
     left: 0;
     border: 0;
 }
-
 /* play button */
 lite-youtube > .lty-playbtn {
     display: block;
@@ -353,12 +307,10 @@ lite-youtube > .lty-playbtn {
     transition: filter .1s cubic-bezier(0, 0, 0.2, 1);
     border: none;
 }
-
 lite-youtube:hover > .lty-playbtn,
 lite-youtube .lty-playbtn:focus {
     filter: none;
 }
-
 /* Post-click styles */
 lite-youtube.lyt-activated {
     cursor: unset;
@@ -368,7 +320,6 @@ lite-youtube.lyt-activated > .lty-playbtn {
     opacity: 0;
     pointer-events: none;
 }
-
 .lyt-visually-hidden {
     clip: rect(0 0 0 0);
     clip-path: inset(50%);
@@ -408,29 +359,7 @@ lite-youtube.lyt-activated > .lty-playbtn {
         display: block;
     }
 
-    /*Controls Home page button*/
-    .impression {
-        flex-direction: column;
-        width: 50%;
-    }
-
-    #about-button {
-        margin-top: 5px;
-        margin-left: 5px;
-        margin-right: 5px;
-    }
-    
-    #video-button {
-        margin-top: 5px;
-        margin-left: 5px;
-        margin-right: 5px;
-    }
-
-    /*Controls the "Hi, how are you?"*/
-    .role h1 {
-        font-size: 4.5vw;
-        font-weight: normal;
-    }
+   
 
     .grid {
         grid-template-columns: repeat(1, 1fr);
