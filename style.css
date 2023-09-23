@@ -224,6 +224,8 @@ ul li:hover {
     background-color: white;
     margin: 6px 0;
     transition: 0.4s;
+
+    background-color: var(--clr-font);
 }
 .open .bar1 {
     -webkit-transform: rotate(-45deg) translate(-6px, 6px);
