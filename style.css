@@ -144,7 +144,7 @@ ul li:hover {
     padding: 5px;
     font-weight: bold;
     font-size: 16px;
-    color: var(--clr-font);
+    color: var(--clr-dark);
 }
 .card img{
     display: block;
