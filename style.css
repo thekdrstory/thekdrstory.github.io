@@ -6,15 +6,19 @@
     overflow-x: hidden;
     font-family: 'Roboto', sans-serif;
 
+   
+  }
+:root {
     /*Lite Mode*/
     --clr-primary: #7AA8EA;
     --clr-lite: #eaf5fd;
     --clr-dark: #0B162C;
-    --clr-action: #67a19c;
     --clr-action-hover: #91bbf5;
 
+    --clr-font: #0B162C;
+
     /*Dark Mode*/
-  }
+}
 h1 {
     font-size: 3rem;
 }
@@ -50,7 +54,7 @@ header {
     align-items: center;
 }
 #brand a {
-    color: var(--clr-dark);
+    color: var(--clr-font);
 }
 /*Controls the desktop header's navigation links*/
 ul {
@@ -61,7 +65,7 @@ ul {
     justify-content: space-around;
 }
 ul a {
-    color: var(--clr-dark);
+    color: var(--clr-font);
 }
 ul li {
     margin-left: 30px;
@@ -87,7 +91,7 @@ ul li:hover {
     font-size: 2rem;
 }
 .button-template {
-    color: var(--clr-dark);
+    color: var(--clr-font);
     background: var(--clr-primary);
     font-weight: bold;
     display: flex;
@@ -140,6 +144,7 @@ ul li:hover {
     padding: 5px;
     font-weight: bold;
     font-size: 16px;
+    color: var(--clr-font);
 }
 .card img{
     display: block;
@@ -163,9 +168,11 @@ ul li:hover {
     margin: 0 auto; /* Center horizontally */
     top: 50%; /* Center vertically */
     transform: translateY(-50%); /* Adjust vertically to center */
-
     border-style: none;
     border-radius: 10px;
+
+    background-color: var(--clr-lite);
+    color: var(--clr-dark);
 }
 .modal::backdrop {
     background: rgb(0 0 0 / .4);
@@ -173,6 +180,8 @@ ul li:hover {
 .modal h4 {
     padding-top: 10px;
 }
+
+
 
 #closeModalButton {
     border-style: none;
@@ -244,9 +253,6 @@ ul li:hover {
 .mobile-menu li {
     margin-bottom: 10px;
 }
-
-
-
 
 
 /*Styles for Lite YouTube Embed*/
@@ -328,24 +334,7 @@ lite-youtube.lyt-activated > .lty-playbtn {
     position: absolute;
     white-space: nowrap;
     width: 1px;
-  }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+}
 
 
 @media only screen and (max-width: 750px) {
@@ -354,32 +343,33 @@ lite-youtube.lyt-activated > .lty-playbtn {
     header nav {
         display: none;
     }
-  
     #hamburger-icon {
         display: block;
     }
-
-   
-
     .grid {
         grid-template-columns: repeat(1, 1fr);
     }
-
     .btn-link-group {
         flex-direction: column;
     }
-
     .content-container h1{
         font-size: 7vw;
     }
-
     .img-about-me{
     }
-
     .content-container p {
         font-size: 4vw;
         margin-left: 10px;
         margin-right: 10px;
     }
+}
 
+/* Dark Mode */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --clr-primary: #7AA8EA;
+        --clr-lite: #1a1a1a;
+        --clr-dark: #eaf5fd;
+        --clr-action-hover: #91bbf5;
+    }
 }
