@@ -18,109 +18,157 @@
 
 <body>
 
-    <header>
+    <!--The Universal Header (needed for all pages)-->
+    <div class="top-bar">
+        <header>
 
-        <!--Logo brand template?-->
-        <div id="brand">
-            <a href="./">KEVIN ROSAS</a>
-        </div>
-
-        <!--This is the desktop navigation bar-->
-        <nav>
-            <ul>
-                <li><a href="./index.html">HOME</a></li>
-                <li><a href="./about.html">ABOUT</a></li>
-                <li><a href="./video.html">VIDEO</a></li>
-                <li><a href="./art.html">ART</a></li>
-            </ul>
-        </nav>
-
-        <!--This is the mobile navigation bar and what it displays when opened-->
-        <div id="hamburger-icon" onclick="toggleMobileMenu(this)">
-            <div class="bar1"></div>
-            <div class="bar2"></div>
-            <div class="bar3"></div>
-            <ul class="mobile-menu">
-                <li><a href="./index.html">HOME</a></li>
-                <li><a href="./about.html">ABOUT</a></li>
-                <li><a href="./video.html">VIDEO</a></li>
-                <li><a href="./art.html">ART</a></li>
-            </ul>
-        </div>
-
-    </header>
-
-    <div class="content-container">
-        <div class="intro">
-            <h1>My Video Portfolio</h1>
-            <p>Here is a collection of various videos I've worked on!</p>
-
-        </div>
-
-        <div class="btn-link-group">
-            <a href="https://drive.google.com/file/d/1A63-7vbXPqxuw1AAXWZA9mqb_jy27BhC/view?usp=drive_link"
-                class="button-template">Resume</a>
-            <a href="https://www.youtube.com/@aramids/videos" class="button-template">My YouTube</a>
-        </div>
-
-
-        <!--Portfolio Pieces-->
-        <div class="grid">
-            <div class="card">
-                <button class="btn_image" id="popup_n64">
-                    <img src="images/video-thumbnail_n64.webp" alt="N64 Commercial">
-                    <span class="btn-text">Nintendo 64 Commercial</span>
-                </button>
+            <!--Logo brand template?-->
+            <div id="brand">
+                <a href="./">KEVIN ROSAS</a>
             </div>
 
-            <div class="card">
-                <button class="btn_image" id="popup_cc">
-                    <img src="images/video-thumbnail_climbing-coastside.webp" alt="girl climbing">
-                    <span class="btn-text">Climbing Coastside</span>
-                </button>
+            <!--This is the desktop navigation bar-->
+            <nav>
+                <ul>
+                    <li><a href="./about.html">ABOUT</a></li>
+                    <li><a href="./video.html">VIDEO</a></li>
+                    <li><a href="./art.html">ART</a></li>
+                </ul>
+            </nav>
+
+            <!--This is the mobile navigation bar and what it displays when opened-->
+            <div id="hamburger-icon" onclick="toggleMobileMenu(this)">
+                <div class="bar1"></div>
+                <div class="bar2"></div>
+                <div class="bar3"></div>
+                <ul class="mobile-menu">
+                    <li><a href="./about.html">ABOUT</a></li>
+                    <li><a href="./video.html">VIDEO</a></li>
+                    <li><a href="./art.html">ART</a></li>
+
+                </ul>
             </div>
 
-            <div class="card">
-                <button class="btn_image" id="popup_codemy">
-                    <img src="images/video-thumbnail_codemy.webp" alt="codemy.com graphic intro">
-                    <span class="btn-text">Codemy.com</span>
-                </button>
+        </header>
+    </div>
+
+    <div id="line-divider"></div>
+
+    <div class="container-intro">
+        <h1>Video Portfolio</h1>
+        <p>Welcome! Here is a collection of videos I've worked on.</p>
+        <p>You can view my resume below or click on indivdual projects to see more information!</p>
+        <p>Note: Hover over each picture to see my role in a specific project!</p>
+        <a href="https://drive.google.com/file/d/1GC9-qLo_-8SWMPhm4pb4UV6_Ip9_TdiI/view?usp=drive_link"
+            class="btn-basic">Resume</a>
+    </div>
+
+    <div class="container-basic">
+
+        <!--Portfolio-->
+        <div class="grid-template">
+
+            <div class="container-card">
+                <div class="overlay-card">
+                    <button class="btn-card" id="popup_n64"></button>
+                    <h2>Nintendo 64 Commercial</h2>
+                    <div class="roles-group">
+                        <p>Writer</p>
+                        <p>Director</p>
+                        <p>Editor</p>
+                        <p>Camera</p>
+                    </div>
+                </div>
+                <img src="thumbnails/thumbnail_n64.webp" alt="N64 Commercial">
             </div>
 
-            <div class="card">
-                <button class="btn_image" id="popup_localonly">
-                    <img src="images/video-thumbnail_locals-only.webp" alt="man paddles in ocean">
-                    <span class="btn-text">Locals Only</span>
-                </button>
+            <div class="container-card">
+                <div class="overlay-card">
+                    <button class="btn-card" id="popup_cc"></button>
+                    <h2>Climbing Coastside</h2>
+                    <div class="roles-group">
+                        <p>Editor</p>
+                        <p>Camera</p>
+                    </div>
+                </div>
+                <img src="thumbnails/thumbnail_cc.webp" alt="Girl rockclimbs">
             </div>
 
-            <div class="card">
-                <button class="btn_image" id="popup_damaris1">
-                    <img src="images/video-thumbnail_damaris-1.webp" alt="cutout">
-                    <span class="btn-text">Damaris Saves The World</span>
-                </button>
+            <div class="container-card">
+                <div class="overlay-card">
+                    <button class="btn-card" id="popup_codemy"></button>
+                    <h2>Codemy.com</h2>
+                    <div class="roles-group">
+                        <p>Editor</p>
+                    </div>
+                </div>
+                <img src="thumbnails/thumbnail_codemy.webp" alt="Codemy Logo">
             </div>
 
-            <div class="card">
-                <button class="btn_image" id="popup_damaris2">
-                    <img src="images/video-thumbnail_damaris-2.webp" alt="cutout">
-                    <span class="btn-text">Even a Fool Learns to love...</span>
-                </button>
+            <div class="container-card">
+                <div class="overlay-card">
+                    <button class="btn-card" id="popup_localonly"></button>
+                    <h2>Locals Only</h2>
+                    <div class="roles-group">
+                        <p>Editor</p>
+                        <p>Camera</p>
+                    </div>
+                </div>
+                <img src="thumbnails/thumbnail_localsonly.webp" alt="Man paddles in ocean">
             </div>
 
-            <div class="card">
-                <button class="btn_image" id="popup_coffeecomic">
-                    <img src="images/video-thumbnail_coffee-comic.webp" alt="man drinks coffee and reads comic">
-                    <span class="btn-text">Coffee and a Comic</span>
-                </button>
+            <div class="container-card">
+                <div class="overlay-card">
+                    <button class="btn-card" id="popup_damaris1"></button>
+                    <h2>Damaris saves the world</h2>
+                    <div class="roles-group">
+                        <p>Writer</p>
+                        <p>Director</p>
+                        <p>Editor</p>
+                        <p>Camera</p>
+                    </div>
+                </div>
+                <img src="thumbnails/thumbnail_damaris-1.webp" alt="Cutouts spread around">
             </div>
 
-            <div class="card">
-                <button class="btn_image" id="popup_pulp">
-                    <img src="images/video-thumbnail_pulp.webp" alt="man tidys up comic stand">
-                    <span class="btn-text">Pulp Fiction</span>
-                </button>
+            <div class="container-card">
+                <div class="overlay-card">
+                    <button class="btn-card" id="popup_damaris2"></button>
+                    <h2>Even a Fool Learns to Love...</h2>
+                    <div class="roles-group">
+                        <p>Writer</p>
+                        <p>Director</p>
+                        <p>Editor</p>
+                        <p>Camera</p>
+                    </div>
+                </div>
+                <img src="thumbnails/thumbnail_damaris-2.webp" alt="Kevin and Jennifer Cutouts">
             </div>
+
+            <div class="container-card">
+                <div class="overlay-card">
+                    <button class="btn-card" id="popup_coffeecomic"></button>
+                    <h2>Coffee and a Comic</h2>
+                    <div class="roles-group">
+                        <p>Asst. Editor</p>
+                        <p>Camera</p>
+                    </div>
+                </div>
+                <img src="thumbnails/thumbnail_coffee-comic.webp" alt="Jeff drinking a coffee and reading a comic!">
+            </div>
+
+            <div class="container-card">
+                <div class="overlay-card">
+                    <button class="btn-card" id="popup_pulp"></button>
+                    <h2>Pulp Fiction</h2>
+                    <div class="roles-group">
+                        <p>Camera</p>
+                    </div>
+                </div>
+                <img src="thumbnails/thumbnail_pulp-fiction.webp" alt="Ryan organizing comics">
+            </div>
+
+
 
         </div>
 
@@ -130,35 +178,35 @@
 
             <div id="info_n64">
                 <lite-youtube videoid="rRkFK3GzfCM" params="controls=1"></lite-youtube>
-                <h4>Description:</h4>
+                <h3>Description:</h3>
                 <p>A fake commercial that emulates the look and feel of the 1990's.</p>
-                <h4>My Role(s):</h4>
+                <h3>My Role(s):</h3>
                 <p>All Production Roles</p>
             </div>
 
             <div id="info_cc">
                 <lite-youtube videoid="dpxxvmgekZ8" params="controls=1"></lite-youtube>
-                <h4>Description:</h4>
+                <h3>Description:</h3>
                 <p>A Documentary about OCC's rockclimbing class.</p>
-                <h4>My Role(s):</h4>
+                <h3>My Role(s):</h3>
                 <p>Editor</p>
                 <p>2nd Camera</p>
                 <p>Additional B-Roll</p>
             </div>
 
             <div id="info_codemy">
-                <lite-youtube videoid="bFsIXYygsg4" params="controls=1"></lite-youtube>
-                <h4>Description:</h4>
+                <lite-youtube videoid="wRiCKCdnLHY" params="controls=1"></lite-youtube>
+                <h3>Description:</h3>
                 <p>Learn to code with John Elder.</p>
-                <h4>My Role(s):</h4>
+                <h3>My Role(s):</h3>
                 <p>Editor</p>
             </div>
 
             <div id="info_localonly">
                 <lite-youtube videoid="SptU-_SmfH4" params="controls=1"></lite-youtube>
-                <h4>Description:</h4>
+                <h3>Description:</h3>
                 <p>A Documentary about local surfing terrorism.</p>
-                <h4>My Role(s):</h4>
+                <h3>My Role(s):</h3>
                 <p>Editor</p>
                 <p>2nd Camera</p>
                 <p>Additional B-Roll</p>
@@ -166,47 +214,53 @@
 
             <div id="info_damaris1">
                 <lite-youtube videoid="8OZA-DD1sDg" params="controls=1"></lite-youtube>
-                <h4>Description:</h4>
+                <h3>Description:</h3>
                 <p>A short film submitted as the final for my Film Production 2 class.</p>
-                <h4>My Role(s):</h4>
+                <h3>My Role(s):</h3>
                 <p>All Production Roles</p>
             </div>
 
             <div id="info_damaris2">
                 <lite-youtube videoid="f8KnfFDROLA" params="controls=1"></lite-youtube>
-                <h4>Description:</h4>
+                <h3>Description:</h3>
                 <p>A short film, the sequel to "Damaris Saves The World", submitted as the final for my Film Production
                     3 class.</p>
-                <h4>My Role(s):</h4>
+                <h3>My Role(s):</h3>
                 <p>All Production Roles</p>
             </div>
 
             <div id="info_coffeecomic">
                 <lite-youtube videoid="kJ5IdQA-ar4" params="controls=1"></lite-youtube>
-                <h4>Description:</h4>
+                <h3>Description:</h3>
                 <p>An interview with the owner of Coffee and a Comic. It's part one of a documentary series about comic
                     book shop owners.</p>
-                <h4>My Role(s):</h4>
+                <h3>My Role(s):</h3>
                 <p>2nd Camera</p>
                 <p>B-Roll</p>
             </div>
 
             <div id="info_pulp">
                 <lite-youtube videoid="6nVCeo94ves" params="controls=1"></lite-youtube>
-                <h4>Description:</h4>
+                <h3>Description:</h3>
                 <p>An interview with the owner of Pulp Fiction Long Beach. It's part two of a documentary series about
                     comic
                     book shop owners.</p>
-                <h4>My Role(s):</h4>
+                <h3>My Role(s):</h3>
                 <p>2nd Camera</p>
                 <p>B-Roll</p>
             </div>
 
-            <button class="button-template" id="closeModalButton">CLOSE</button>
+            <button class="btn-basic" id="closeModalButton">Close</button>
         </dialog>
 
-        <small class="copyright">© Kevin Rosas 2023</small>
     </div>
+
+    <footer>
+        <div class="copyright">
+            <p>&copy; Kevin Rosas 2023</p>
+        </div>
+    </footer>
+
 
     <script src="index.js"></script>
     <script src="video.js"></script>

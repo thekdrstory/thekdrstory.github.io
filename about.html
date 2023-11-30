@@ -17,43 +17,53 @@
 </head>
 
 <body>
-  <header>
-    <div id="brand">
-      <a href="./">KEVIN ROSAS</a>
-    </div>
-    <nav>
-      <ul>
-        <li><a href="./index.html">HOME</a></li>
-        <li><a href="./about.html">ABOUT</a></li>
-        <li><a href="./video.html">VIDEO</a></li>
-        <li><a href="./art.html">ART</a></li>
-      </ul>
-    </nav>
-    <div id="hamburger-icon" onclick="toggleMobileMenu(this)">
-      <div class="bar1"></div>
-      <div class="bar2"></div>
-      <div class="bar3"></div>
-      <ul class="mobile-menu">
-        <li><a href="./index.html">HOME</a></li>
-        <li><a href="./about.html">ABOUT</a></li>
-        <li><a href="./video.html">VIDEO</a></li>
-        <li><a href="./art.html">ART</a></li>
 
-      </ul>
-    </div>
-  </header>
+  <div class="top-bar">
+    <header>
 
-  <div class="content-container">
-    <div class="intro">
-      <h1>My Name is Kevin Rosas!</h1>
-    </div>
-    <p>Based in California, I have a passion for technology and the arts.</p>
-    <p>I've dabbled in directing, screenwriting, drawing, web development (I made this site), and programming! My main
-      focus is on video editing!</p>
+      <!--Logo brand template?-->
+      <div id="brand">
+        <a href="./">KEVIN ROSAS</a>
+      </div>
 
-    <img class="img-about-me" src="images/kevin_1k.webp" alt="Kevin Rosas">
-    <small class="copyright">© Kevin Rosas 2023</small>
+      <!--This is the desktop navigation bar-->
+      <nav>
+        <ul>
+          <li><a href="./about.html">ABOUT</a></li>
+          <li><a href="./video.html">VIDEO</a></li>
+          <li><a href="./art.html">ART</a></li>
+        </ul>
+      </nav>
+
+      <!--This is the mobile navigation bar and what it displays when opened-->
+      <div id="hamburger-icon" onclick="toggleMobileMenu(this)">
+        <div class="bar1"></div>
+        <div class="bar2"></div>
+        <div class="bar3"></div>
+        <ul class="mobile-menu">
+          <li><a href="./about.html">ABOUT</a></li>
+          <li><a href="./video.html">VIDEO</a></li>
+          <li><a href="./art.html">ART</a></li>
+
+        </ul>
+      </div>
+
+    </header>
   </div>
+
+  <div id="line-divider"></div>
+
+  <div class="container-intro">
+    <h1>Who is Kevin Rosas?</h1>
+    <p>I'm just a guy who found himself interested in film and programming!</p>
+  </div>
+
+  <footer>
+    <div class="copyright">
+      <p>&copy; Kevin Rosas 2023</p>
+    </div>
+  </footer>
+
   <script src="index.js"></script>
 </body>
 

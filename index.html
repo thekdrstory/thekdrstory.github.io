@@ -20,51 +20,65 @@
 <body>
 
   <!--The Universal Header (needed for all pages)-->
-  <header>
+  <div class="top-bar">
+    <header>
 
-    <!--Logo brand template?-->
-    <div id="brand">
-      <a href="./">KEVIN ROSAS</a>
-    </div>
+      <!--Logo brand template?-->
+      <div id="brand">
+        <a href="./">KEVIN ROSAS</a>
+      </div>
 
-    <!--This is the desktop navigation bar-->
-    <nav>
-      <ul>
-        <li><a href="./">HOME</a></li>
-        <li><a href="./about.html">ABOUT</a></li>
-        <li><a href="./video.html">VIDEO</a></li>
-        <li><a href="./art.html">ART</a></li>
-      </ul>
-    </nav>
+      <!--This is the desktop navigation bar-->
+      <nav>
+        <ul>
+          <li><a href="./about.html">ABOUT</a></li>
+          <li><a href="./video.html">VIDEO</a></li>
+          <li><a href="./art.html">ART</a></li>
+        </ul>
+      </nav>
 
-    <!--This is the mobile navigation bar and what it displays when opened-->
-    <div id="hamburger-icon" onclick="toggleMobileMenu(this)">
-      <div class="bar1"></div>
-      <div class="bar2"></div>
-      <div class="bar3"></div>
-      <ul class="mobile-menu">
-        <li><a href="./">HOME</a></li>
-        <li><a href="./about.html">ABOUT</a></li>
-        <li><a href="./video.html">VIDEO</a></li>
-        <li><a href="./art.html">ART</a></li>
+      <!--This is the mobile navigation bar and what it displays when opened-->
+      <div id="hamburger-icon" onclick="toggleMobileMenu(this)">
+        <div class="bar1"></div>
+        <div class="bar2"></div>
+        <div class="bar3"></div>
+        <ul class="mobile-menu">
+          <li><a href="./about.html">ABOUT</a></li>
+          <li><a href="./video.html">VIDEO</a></li>
+          <li><a href="./art.html">ART</a></li>
 
-      </ul>
-    </div>
+        </ul>
+      </div>
 
-  </header>
-  <script src="index.js"></script>
-
-  <!--The first impression located in the middle of the screen!-->
-  <div class="role">
-    <h3>Hi, How are you?</h3>
-    <h1>I'm Kevin Rosas</h1>
-    <h2>I am a video editor</h2>
-    <a href="./video.html" class="button-template">My Work</a>
+    </header>
   </div>
 
-  <small class="copyright">© Kevin Rosas 2023</small>
+  <div id="line-divider"></div>
+
+  <div class="container-basic" id="home-page-container">
+
+    <div class="container-column">
+      <div class="left-column">
+        <h3>Hi, I'm Kevin.</h3>
+        <h1 id="home-page-h1">I edit videos for the internet.</h1>
+        <h3>Do you need a Video Editor who specializes in online content? I'm your guy. </h3>
+        <a href="./video.html" class="btn-basic" id="home-page-button">My Work</a>
+      </div>
+      <div class="right-column">
+        <img id="home-img" src="images/kevin_1k.webp" alt="Kevin Rosas">
+      </div>
+    </div>
+
+  </div>
 
 
+  <footer>
+    <div class="copyright">
+      <p>&copy; Kevin Rosas 2023</p>
+    </div>
+  </footer>
+
+  <script src="index.js"></script>
 </body>
 
 </html>
