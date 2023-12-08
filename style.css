@@ -140,7 +140,7 @@ ul li:hover {
 }
 #line-divider {
     border-bottom: 1px solid #d1bfa1;
-    max-width: 1250px;
+    max-width: 1210px;
     margin: 0 auto;
 }
 .grid-template {
@@ -168,15 +168,21 @@ ul li:hover {
     justify-content: center;
     opacity: 0;
     transition: opacity 0.25s;
+    color: var(--clr-background);
+
+
 }
 .overlay-card h2{
     position: absolute;
     font-size: 1.3rem;
     text-transform: uppercase;
-    color: var(--clr-background);
     cursor: pointer;
     pointer-events: none
 }
+#title-intro {
+    text-align: center;
+}
+
 
 /*Home Page Specifics*/
 #home-page-container {
@@ -228,12 +234,13 @@ ul li:hover {
 }
 .btn-card {
     outline: none;
-    background-color: var(--clr-lightblue);
     width: 100%;
     height: 100%;
-    opacity: 75%;
     border: none;
     padding: 0;
+    opacity: 75%;
+    background-color: var(--clr-lightblue);
+
 }
 .btn-card:hover {
     cursor: pointer;
@@ -279,6 +286,44 @@ ul li:hover {
     left: 0;
     width: 100%;
     height: 100%;
+}
+
+/* Photo */
+#photo-select-card {
+    max-height: 200px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+#photo-select-card h2 {
+    font-size: 2rem;
+}
+.photo-card-description {
+    width: 100%;
+    height: 100%;
+    /* padding-left: 20px;
+    padding-right: 20px; */
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: end;
+    color: var(--clr-background);
+    pointer-events: none;
+}
+.photo-card-description p {
+    font-size: 0.8rem;
+}
+.genre-tag {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    display: flex;
+    align-items: start;
+    justify-content: end;
+    text-transform: uppercase;
+    color: var(--clr-background);
+    cursor: pointer;
+    pointer-events: none
 }
 
 /*Art*/
@@ -450,6 +495,7 @@ lite-youtube.lyt-activated > .lty-playbtn {
     .grid-template {
         grid-template-columns: repeat(1, 1fr);
     }
+    
 
     /* Home */
     #home-page-container {
