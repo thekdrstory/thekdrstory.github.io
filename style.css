@@ -129,7 +129,7 @@ ul li:hover {
     width: 200px;
     height: 50px;
     font-size: 1rem;
-    border-radius: 10px;
+    border-radius: 5px;
     text-decoration: none;
     cursor: pointer;
     /* box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); */
@@ -223,7 +223,7 @@ ul li:hover {
 }
 .roles-group p {
     font-size: 0.8rem;
-    background: var(--clr-darkblue);
+    background: var(--clr-lightblue);
     color: var(--clr-white);
     padding: 10px;
     border-radius: 5px;
@@ -239,7 +239,8 @@ ul li:hover {
     border: none;
     padding: 0;
     opacity: 75%;
-    background-color: var(--clr-lightblue);
+    background-color: var(--clr-darkblue);
+    /* background: linear-gradient(blue, pink); */
 
 }
 .btn-card:hover {
