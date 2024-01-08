@@ -90,7 +90,6 @@ ul li:hover {
     padding-right: 20px;
     margin: 0 auto;
     height: 70px;
-    margin-bottom: 20%;
 }
 .socials-icon-group img {
     width: 50px;
@@ -515,6 +514,7 @@ lite-youtube.lyt-activated > .lty-playbtn {
 
     .footer-bar{
         display: block;
+        margin-bottom: 15%;
     }
     
 
