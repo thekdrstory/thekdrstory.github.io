@@ -31,6 +31,7 @@
                 <ul>
                     <li><a href="./about.html">ABOUT</a></li>
                     <li><a href="./video.html">VIDEO</a></li>
+                    <li><a href="./photo.html">PHOTO</a></li>
                     <li><a href="./art.html">ART</a></li>
                 </ul>
             </nav>
@@ -43,6 +44,7 @@
                 <ul class="mobile-menu">
                     <li><a href="./about.html">ABOUT</a></li>
                     <li><a href="./video.html">VIDEO</a></li>
+                    <li><a href="./photo.html">PHOTO</a></li>
                     <li><a href="./art.html">ART</a></li>
 
                 </ul>
@@ -53,8 +55,88 @@
 
     <div id="line-divider"></div>
 
+    <div class="container-intro">
+        <h1 id="title-intro">Photo Portfolio</h1>
+        <p>I take photos too!</p>
+    </div>
+
+    <div class="container-basic">
+
+        <!--Grid of selectable galleries.-->
+        <div class="grid-template">
+
+            <!-- Portrait Gallery -->
+            <div class="container-card">
+                <div class="overlay-card">
+                    <button class="btn-card" id="popup_portraits"></button>
+                    <h2>Portraits</h2>
+                    <div class="info-group">
+                    </div>
+                </div>
+                <img src="thumbnails/thumbnail_n64.webp" alt="N64 Commercial">
+            </div>
+
+            <!-- Landscape Gallery -->
+            <div class="container-card">
+                <div class="overlay-card">
+                    <button class="btn-card" id="popup_landscapes"></button>
+                    <h2>Landscapes</h2>
+                    <div class="info-group">
+                    </div>
+                </div>
+                <img src="thumbnails/thumbnail_n64.webp" alt="N64 Commercial">
+            </div>
+
+        </div>
 
 
+        <!--Information that shows up in the popup.-->
+        <dialog class="modal" id="modal">
+
+            <!-- Portrait Gallery -->
+            <div id="info_portraits">
+                <div class="grid-template">
+                    <img src="thumbnails/thumbnail_n64.webp" alt="N64 Commercial">
+                    <img src="thumbnails/thumbnail_n64.webp" alt="N64 Commercial">
+                </div>
+                <h3>Description:</h3>
+                <p>A fake commercial that emulates the look and feel of the 1990's.</p>
+                <h3>My Role(s):</h3>
+                <p>All Production Roles</p>
+            </div>
+
+            <!-- Landscape Gallery -->
+            <div id="info_landscapes">
+                <h3>Description:</h3>
+                <p>BUKY HSDFD</p>
+                <h3>My Role(s):</h3>
+                <p>All Production Roles</p>
+            </div>
+
+
+            <button class="btn-basic" id="closeModalButton">Close</button>
+        </dialog>
+    </div>
+
+    <div id="line-divider"></div>
+
+    <footer class="footer-bar">
+        <p class="copyright">&copy; 2024 Kevin Rosas</p>
+        <div class="socials-icon-group">
+            <a href="https://www.instagram.com/thekdrstory/" target="_blank"><img src="icons/logo_instagram.webp"
+                    alt="Instagram Logo"></a>
+            <a href="https://www.youtube.com/@aramids/videos" target="_blank"><img src="icons/logo_youtube.webp"
+                    alt="YouTube Logo"></a>
+            <a href="https://github.com/thekdrstory" target="_blank"><img src="icons/logo_github.webp"
+                    alt="Github Logo"></a>
+            <a href="mailto:thekevinrosas@gmail.com" target="_blank"><img src="icons/logo_email.webp"
+                    alt="Instagram Logo"></a>
+            <a href="https://www.linkedin.com/in/kevinrosas/" target="_blank"><img src="icons/logo_linkedin.webp"
+                    alt="Linkedin Logo"></a>
+        </div>
+    </footer>
+
+    <script src="photo.js"></script>
     <script src="index.js"></script>
 </body>
 

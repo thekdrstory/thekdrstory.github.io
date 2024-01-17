@@ -268,7 +268,7 @@ ul li:hover {
     top: 50%; /* Center vertically */
     transform: translateY(-50%); /* Adjust vertically to center */
     border-style: none;
-    border-radius: 10px;
+    border-radius: 5px;
 
     background-color: var(--clr-background);
     color: var(--clr-black);
@@ -285,7 +285,7 @@ ul li:hover {
     font-weight: 900;
 }
 .modal::backdrop {
-    background: rgb(0 0 0 / .4);
+    background: rgba(0, 0, 0, 0.7);
 }
 #closeModalButton {
     border-style: none;
@@ -305,7 +305,24 @@ ul li:hover {
 }
 
 /* Photo */
-
+.info-group {
+    width: 100%;
+    height: 100%;
+    padding-left: 20px;
+    padding-right: 20px;
+    position: absolute;
+    display: flex;
+    align-items: end;
+    justify-content: start;
+    text-transform: uppercase;
+    cursor: pointer;
+    pointer-events: none
+}
+.info-group p {
+    font-size: 0.8rem;
+    color: var(--clr-white);
+    padding: 10px;
+}
 
 /*Art*/
 #grid-comics {
