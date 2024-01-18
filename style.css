@@ -263,7 +263,7 @@ ul li:hover {
 }
 .modal {
     padding: 20px;
-    width: 1000px;
+    width: 65%;
     margin: 0 auto; /* Center horizontally */
     top: 50%; /* Center vertically */
     transform: translateY(-50%); /* Adjust vertically to center */
@@ -322,6 +322,14 @@ ul li:hover {
     font-size: 0.8rem;
     color: var(--clr-white);
     padding: 10px;
+}
+.grid-template-photo {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 5px;
+}
+.grid-template-photo img {
+    width: 100%;
 }
 
 /*Art*/
@@ -498,6 +506,10 @@ lite-youtube.lyt-activated > .lty-playbtn {
         display: block;
         margin-bottom: 15%;
     }
+
+    .modal {
+        width: 90%;
+    }
     
 
     /* Home */
@@ -543,6 +555,11 @@ lite-youtube.lyt-activated > .lty-playbtn {
     }
     .overlay-card h2{
         font-size: 1rem;
+    }
+
+    /* Photo */
+    .grid-template-photo {
+        grid-template-columns: repeat(4, 1fr);
     }
 
     /* Art */
