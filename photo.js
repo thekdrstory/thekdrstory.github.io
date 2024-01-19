@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', function () {
     // Get references to the button and dialog elements
     const closeModalButton = document.getElementById('closeModalButton');
-    const modal = document.getElementById('modal');
+    const modal = document.getElementById('modal-photo');
     
     // Get references to the open modal buttons and their corresponding content elements
     const modalButtons = [
