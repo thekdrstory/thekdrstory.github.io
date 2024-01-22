@@ -10,6 +10,7 @@ document.addEventListener('DOMContentLoaded', function () {
         { button: document.getElementById('popup_summermilkshake2023'), content: document.getElementById('info_summermilkshake2023') },
         { button: document.getElementById('popup_perfect-man'), content: document.getElementById('info_perfect-man') },
         { button: document.getElementById('popup_on-the-ropes'), content: document.getElementById('info_on-the-ropes') },
+        { button: document.getElementById('popup_cries-of-lies'), content: document.getElementById('info_cries-of-lies') },
     ];
 
     // Add event listeners to open the dialog when buttons are clicked
