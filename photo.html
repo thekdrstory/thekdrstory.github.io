@@ -18,6 +18,7 @@
 
 <body>
 
+    <!--The Universal Header (needed for all pages)-->
     <div class="top-bar">
         <header>
 
@@ -57,35 +58,14 @@
 
     <div class="container-intro">
         <h1 id="title-intro">Photo Portfolio</h1>
-        <p>I take photos too!</p>
+        <p>A collection of my work as a photographer.</p>
+        <a href="https://www.instagram.com/thekdrstory/" class="btn-basic" target="_blank">My Instagram</a>
     </div>
 
     <div class="container-basic">
 
         <!--Grid of selectable galleries.-->
         <div class="grid-template">
-
-            <!-- Portraits Gallery-->
-            <div class="container-card">
-                <div class="overlay-card">
-                    <button class="btn-card" id="popup_portraits"></button>
-                    <h2>Portraits</h2>
-                    <div class="info-group">
-                    </div>
-                </div>
-                <img src="thumbnails/thumbnail_n64.webp" alt="N64 Commercial">
-            </div>
-
-            <!-- Landscape Gallery -->
-            <div class="container-card">
-                <div class="overlay-card">
-                    <button class="btn-card" id="popup_landscapes"></button>
-                    <h2>Landscapes</h2>
-                    <div class="info-group">
-                    </div>
-                </div>
-                <img src="thumbnails/thumbnail_n64.webp" alt="N64 Commercial">
-            </div>
 
             <!-- Summer Milkshake 2023 Gallery -->
             <div class="container-card">
@@ -144,48 +124,88 @@
 
         </div>
 
-
         <!--Information that shows up in the popup.-->
         <dialog class="modal" id="modal-photo">
 
-            <!-- Portrait Gallery -->
-            <div id="info_portraits">
-                <div class="grid-template">
-                    <img src="thumbnails/thumbnail_n64.webp" alt="N64 Commercial">
-                    <img src="thumbnails/thumbnail_n64.webp" alt="N64 Commercial">
-                </div>
-                <h3>Description:</h3>
-                <p>A fake commercial that emulates the look and feel of the 1990's.</p>
-                <h3>My Role(s):</h3>
-                <p>All Production Roles</p>
-            </div>
-
-            <!-- Landscape Gallery -->
-            <div id="info_landscapes">
-                <h3>Description:</h3>
-                <p>BUKY HSDFD</p>
-                <h3>My Role(s):</h3>
-                <p>All Production Roles</p>
-            </div>
 
             <!-- Summer Milkshake 2023 Gallery -->
             <div id="info_summermilkshake2023">
-                <h3>Description:</h3>
-                <p>BASED</p>
-                <h3>My Role(s):</h3>
-                <p>BASED</p>
+
+                <h3>Information:</h3>
+                <p><b>Description:</b> A showcase of Abstract Milk films</p>
+                <p><b>Date:</b> August 15th 2023</p>
+
+                <div class="photo-gallery-template">
+
+                    <div class="photo-gallery-column">
+                        <a href="images/photo_summer-milkshake-2023-2.webp" target="_blank">
+                            <img src="images/photo_summer-milkshake-2023-2.webp" loading="lazy" alt="???">
+                        </a>
+                        <a href="images/photo_summer-milkshake-2023-1.webp" target="_blank">
+                            <img src="images/photo_summer-milkshake-2023-1.webp" loading="lazy" alt="???">
+                        </a>
+                        <a href="images/photo_summer-milkshake-2023-10.webp" target="_blank">
+                            <img src="images/photo_summer-milkshake-2023-10.webp" loading="lazy" alt="???">
+                        </a>
+                    </div>
+
+                    <div class="photo-gallery-column">
+                        <a href="images/photo_summer-milkshake-2023-4.webp" target="_blank">
+                            <img src="images/photo_summer-milkshake-2023-4.webp" loading="lazy" alt="???">
+                        </a>
+
+                        <a href="images/photo_summer-milkshake-2023-7.webp" target="_blank">
+                            <img src="images/photo_summer-milkshake-2023-7.webp" loading="lazy" alt="???">
+                        </a>
+                        <a href="images/photo_summer-milkshake-2023-11.webp" target="_blank">
+                            <img src="images/photo_summer-milkshake-2023-11.webp" loading="lazy" alt="???">
+                        </a>
+                    </div>
+
+                    <div class="photo-gallery-column">
+                        <a href="images/photo_summer-milkshake-2023-5.webp" target="_blank">
+                            <img src="images/photo_summer-milkshake-2023-5.webp" loading="lazy" alt="???">
+                        </a>
+                        <a href="images/photo_summer-milkshake-2023-6.webp" target="_blank">
+                            <img src="images/photo_summer-milkshake-2023-6.webp" loading="lazy" alt="???">
+                        </a>
+                        <a href="images/photo_summer-milkshake-2023-12.webp" target="_blank">
+                            <img src="images/photo_summer-milkshake-2023-12.webp" loading="lazy" alt="???">
+                        </a>
+                    </div>
+
+                    <div class="photo-gallery-column">
+                        <a href="images/photo_summer-milkshake-2023-8.webp" target="_blank">
+                            <img src="images/photo_summer-milkshake-2023-8.webp" loading="lazy" alt="???">
+                        </a>
+                        <a href="images/photo_summer-milkshake-2023-3.webp" target="_blank">
+                            <img src="images/photo_summer-milkshake-2023-3.webp" loading="lazy" alt="???">
+                        </a>
+                    </div>
+
+                    <div class="photo-gallery-column">
+                        <a href="images/photo_summer-milkshake-2023-9.webp" target="_blank">
+                            <img src="images/photo_summer-milkshake-2023-9.webp" loading="lazy" alt="???">
+                        </a>
+                        <a href="images/photo_summer-milkshake-2023-13.webp" target="_blank">
+                            <img src="images/photo_summer-milkshake-2023-13.webp" loading="lazy" alt="???">
+                        </a>
+                    </div>
+
+                </div>
+
             </div>
 
             <!-- The Perfect Man -->
             <div id="info_perfect-man">
 
                 <h3>Information:</h3>
-                <p>Date: October 15th 2023</p>
-                <p>Directed and Written by Ashley J. Pincek</p>
-                <p>Cinematography by Andrew Nava</p>
-                <p>Sound by Warren Meyers and Juan Cocina</p>
-                <p>Cast: Ashleigh McPhie and Trang Phan</p>
-                <p>Crew: Baron Logan, Dustin Phan, Brandon Huggins, Nicholas Johnson.</p>
+                <p><b>Date:</b> October 15th 2023</p>
+                <p><b>Director/Writer:</b> AJ Pincek</p>
+                <p><b>Cinematographer:</b> Andrew Nava</p>
+                <p><b>Sound:</b> Warren Meyers & Juan Cocina</p>
+                <p><b>Cast:</b> Ashleigh McPhie & Trang Phan</p>
+                <p><b>Crew:</b> Baron Logan, Dustin Phan, Brandon Huggins, Nicholas Johnson.</p>
 
                 <div class="photo-gallery-template">
 
@@ -406,6 +426,90 @@
                         </a>
                         <a href="images/photo_cries-of-lies-15.webp" target="_blank">
                             <img src="images/photo_cries-of-lies-15.webp" loading="lazy" alt="Slate">
+                        </a>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- Cabbie -->
+            <div id="info_cabbie">
+
+                <h3>Information:</h3>
+                <p><b>Date:</b> October 24th, 27th, 30th 2023</p>
+                <p><b>Director/Writer:</b> Ashleigh McPhie</p>
+                <p><b>Cinematographer:</b> Baron Logan</p>
+                <p><b>Cast:</b> Sebastian, Brandon Huggins, Habiba, Robbie Macey, Dan, Khan Nguyen, Trang Phan, David
+                    Paul Cortez, Angel</p>
+                <p><b>Crew:</b> AJ Pincek, Raymond Pontanillo, Ellen, David Salazar</p>
+
+                <div class="photo-gallery-template">
+
+                    <div class="photo-gallery-column">
+                        <a href="images/photo_cabbie-1.webp" target="_blank">
+                            <img src="images/photo_cabbie-1.webp" loading="lazy" alt="Slate">
+                        </a>
+                        <a href="images/photo_cabbie-4.webp" target="_blank">
+                            <img src="images/photo_cabbie-4.webp" loading="lazy" alt="Slate">
+                        </a>
+                        <a href="images/photo_cabbie-12.webp" target="_blank">
+                            <img src="images/photo_cabbie-12.webp" loading="lazy" alt="Slate">
+                        </a>
+                    </div>
+
+                    <div class="photo-gallery-column">
+                        <a href="images/photo_cabbie-3.webp" target="_blank">
+                            <img src="images/photo_cabbie-3.webp" loading="lazy" alt="Slate">
+                        </a>
+                        <a href="images/photo_cabbie-2.webp" target="_blank">
+                            <img src="images/photo_cabbie-2.webp" loading="lazy" alt="Slate">
+                        </a>
+                        <a href="images/photo_cabbie-15.webp" target="_blank">
+                            <img src="images/photo_cabbie-15.webp" loading="lazy" alt="Slate">
+                        </a>
+                    </div>
+
+                    <div class="photo-gallery-column">
+                        <a href="images/photo_cabbie-5.webp" target="_blank">
+                            <img src="images/photo_cabbie-5.webp" loading="lazy" alt="Slate">
+                        </a>
+                        <a href="images/photo_cabbie-7.webp" target="_blank">
+                            <img src="images/photo_cabbie-7.webp" loading="lazy" alt="Slate">
+                        </a>
+                        <a href="images/photo_cabbie-18.webp" target="_blank">
+                            <img src="images/photo_cabbie-18.webp" loading="lazy" alt="Slate">
+                        </a>
+                    </div>
+
+                    <div class="photo-gallery-column">
+                        <a href="images/photo_cabbie-10.webp" target="_blank">
+                            <img src="images/photo_cabbie-10.webp" loading="lazy" alt="Slate">
+                        </a>
+                        <a href="images/photo_cabbie-8.webp" target="_blank">
+                            <img src="images/photo_cabbie-8.webp" loading="lazy" alt="Slate">
+                        </a>
+                        <a href="images/photo_cabbie-13.webp" target="_blank">
+                            <img src="images/photo_cabbie-13.webp" loading="lazy" alt="Slate">
+                        </a>
+                        <a href="images/photo_cabbie-16.webp" target="_blank">
+                            <img src="images/photo_cabbie-16.webp" loading="lazy" alt="Slate">
+                        </a>
+                    </div>
+
+                    <div class="photo-gallery-column">
+                        <a href="images/photo_cabbie-9.webp" target="_blank">
+                            <img src="images/photo_cabbie-9.webp" loading="lazy" alt="Slate">
+                        </a>
+
+                        <a href="images/photo_cabbie-6.webp" target="_blank">
+                            <img src="images/photo_cabbie-6.webp" loading="lazy" alt="Slate">
+                        </a>
+                        <a href="images/photo_cabbie-14.webp" target="_blank">
+                            <img src="images/photo_cabbie-14.webp" loading="lazy" alt="Slate">
+                        </a>
+                        <a href="images/photo_cabbie-17.webp" target="_blank">
+                            <img src="images/photo_cabbie-17.webp" loading="lazy" alt="Slate">
                         </a>
                     </div>
 
