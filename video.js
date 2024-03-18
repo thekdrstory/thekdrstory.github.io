@@ -8,6 +8,7 @@ document.addEventListener('DOMContentLoaded', function () {
         { button: document.getElementById('popup_n64'), content: document.getElementById('info_n64') },
         { button: document.getElementById('popup_cc'), content: document.getElementById('info_cc') },
         { button: document.getElementById('popup_codemy'), content: document.getElementById('info_codemy') },
+        { button: document.getElementById('popup_tkinter'), content: document.getElementById('info_tkinter') },
         { button: document.getElementById('popup_localonly'), content: document.getElementById('info_localonly') },
         { button: document.getElementById('popup_damaris1'), content: document.getElementById('info_damaris1') },
         { button: document.getElementById('popup_damaris2'), content: document.getElementById('info_damaris2') },
