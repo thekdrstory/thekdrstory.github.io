@@ -15,7 +15,8 @@ document.addEventListener('DOMContentLoaded', function () {
         { button: document.getElementById('popup_coffeecomic'), content: document.getElementById('info_coffeecomic') },
         { button: document.getElementById('popup_pulp'), content: document.getElementById('info_pulp') },
         { button: document.getElementById('popup_purple'), content: document.getElementById('info_purple') },
-        { button: document.getElementById('popup_rockreationpromos'), content: document.getElementById('info_rockreationpromos') }
+        { button: document.getElementById('popup_rockreationpromos'), content: document.getElementById('info_rockreationpromos') },
+        { button: document.getElementById('popup_freeagency'), content: document.getElementById('info_freeagency') }
     ];
 
     // Add event listeners to open the dialog when buttons are clicked
