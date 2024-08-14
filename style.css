@@ -524,8 +524,6 @@ lite-youtube.lyt-activated > .lty-playbtn {
         margin-bottom: 15%;
     }
 
-    
-
     /* Home */
     #home-page-container {
         /* padding-top: 15px; */
@@ -574,6 +572,9 @@ lite-youtube.lyt-activated > .lty-playbtn {
     /* Photo */
     .grid-template-photo {
         grid-template-columns: repeat(4, 1fr);
+    }
+    .photo-gallery-template {
+        flex-direction: column;
     }
 
     /* Art */
