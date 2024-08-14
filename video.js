@@ -2,6 +2,7 @@ document.addEventListener('DOMContentLoaded', function () {
     // Get references to the button and dialog elements
     const closeModalButton = document.getElementById('closeModalButton');
     const modal = document.getElementById('modal');
+    const body = document.body;
     
     // Get references to the open modal buttons and their corresponding content elements
     const modalButtons = [
@@ -27,12 +28,14 @@ document.addEventListener('DOMContentLoaded', function () {
             });
             content.style.display = 'block';
             modal.showModal();
+            body.classList.add('no-scroll'); 
         });
     });
 
     // Add an event listener to close the dialog when the close button is clicked
     closeModalButton.addEventListener('click', () => {
         modal.close();
+        body.classList.remove('no-scroll');
     });
 });
 
