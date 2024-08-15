@@ -2,6 +2,7 @@
 :root {
 
     /*Colour Lite Mode Scheme*/
+    /* #000815 dark mode blue? */
     --clr-background: #faf7e6;
     --clr-action: #c8374d;
     --clr-action-hover: #eb7d72;
@@ -222,6 +223,17 @@ ul li:hover {
 }
 .no-scroll {
     overflow: hidden;
+}
+.blur-load {
+    background-size: cover;
+    background-position: center;
+}
+.blur-load.loaded > img {
+    opacity: 1;
+}
+.blur-load > img {
+    opacity: 0;
+    transition: opacity 200ms ease-in-out;
 }
 
 /*Home Page Specifics*/
