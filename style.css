@@ -2,16 +2,47 @@
 :root {
 
     /*Colour Lite Mode Scheme*/
-    /* #000815 dark mode blue? */
-    --clr-background: #faf7e6;
-    --clr-action: #c8374d;
-    --clr-action-hover: #eb7d72;
-    --clr-white: #fafafa;
-    --clr-darkblue: #0A4266;
-    --clr-lightblue: #2F8497;
-    --clr-black: #141414;
+    --clr-brand-primary: #2563eb;
+    --clr-brand-secondary: #7425eb;
+    --clr-background: #FFFFFF;
+    --clr-font-general: #141414;
+    --clr-modal-background: #FFFFFF;
+    --clr-modal-border: #1E293B;
+    --clr-button-hover: #3876fa;
+    --clr-button-text: #F8FAFC;
+    --clr-card-text: #F8FAFC;
+    --clr-card-background: #2563eb;
+    --clr-card-role-background: #F8FAFC;
+    --clr-card-role-text: #141414;
+    --clr-art-overlay-text: #F8FAFC;
+    --clr-dropdown: #141414;
     
 }
+
+/* Dark Mode */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --clr-brand-primary: #2563eb;
+        --clr-brand-secondary: #7425eb;
+        --clr-background: #09090B;
+        --clr-font-general: #F8FAFC;
+        --clr-modal-background: #020817;
+        --clr-modal-border: #1E293B;
+        --clr-button-hover: #3876fa;
+        --clr-button-text: #F8FAFC;
+        --clr-card-text: #F8FAFC;
+        --clr-card-background: #2563eb;
+        --clr-card-role-background: #141414;
+        --clr-card-role-text: #F8FAFC;
+        --clr-art-overlay-text: #F8FAFC;
+        --clr-dropdown: #F8FAFC;
+    }
+    
+    .socials-icon-group img {
+        filter:invert(100%)
+    }
+}
+
 * {
     font-family: 'Roboto', sans-serif;
     font-size: 18px;
@@ -19,7 +50,7 @@
 }
 body {
     background-color: var(--clr-background);
-    color: var(--clr-black);
+    color: var(--clr-font-general);
     /* min-height: 100vh; */
 }
 h1 {
@@ -59,7 +90,7 @@ header a {
     align-items: center;
 }
 #brand a {
-    color: var(--clr-black);
+    color: var(--clr-brand-primary);
 }
 ul {
     list-style: none;
@@ -68,14 +99,14 @@ ul {
     align-items: center;
 }
 ul a {
-    color: var(--clr-black);
+    color: var(--clr-font-general);
 }
 ul li {
     margin-left: 20px;
 }
 ul li:hover {
-    /* transform: scale(1.2);
-    transition: 0.2s; */
+    transform: scale(1.2);
+    transition: 0.2s;
 }
 
 /*Footer Settings*/
@@ -136,8 +167,8 @@ ul li:hover {
     justify-content: end;
 }
 .btn-basic {
-    color: var(--clr-white);
-    background: var(--clr-action);
+    color: var(--clr-button-text);
+    background: var(--clr-brand-primary);
     display: flex;
     text-align: center;
     align-items: center;
@@ -151,14 +182,14 @@ ul li:hover {
     /* box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); */
 }
 .btn-basic:hover, .button-template:active{
-    background: var(--clr-action-hover);
+    background: var(--clr-button-hover);
     /* box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.2); */
 }
-#line-divider {
+/* #line-divider {
     border-bottom: 1px solid #d1bfa1;
     max-width: 1210px;
     margin: 0 auto;
-}
+} */
 .grid-template {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -184,7 +215,7 @@ ul li:hover {
     justify-content: center;
     opacity: 0;
     transition: opacity 0.25s;
-    color: var(--clr-background);
+    color: var(--clr-card-text);
 
 
 }
@@ -205,7 +236,7 @@ ul li:hover {
     border: none;
     padding: 0;
     opacity: 75%;
-    background-color: var(--clr-darkblue);
+    background-color: var(--clr-card-background);
     /* background: linear-gradient(blue, pink); */
 
 }
@@ -219,7 +250,7 @@ ul li:hover {
     text-decoration: underline;
     text-transform: capitalize;
     font-weight: 900;
-    color: var(--clr-action);
+    color: var(--clr-brand-secondary);
 }
 .no-scroll {
     overflow: hidden;
@@ -235,6 +266,9 @@ ul li:hover {
     opacity: 0;
     transition: opacity 200ms ease-in-out;
 }
+.emphasis {
+    color: var(--clr-brand-primary);
+}
 
 /*Home Page Specifics*/
 #home-page-container {
@@ -248,6 +282,10 @@ ul li:hover {
 #home-page-h1 {
     margin-top: 15px;
     margin-bottom: 15px;
+    font-size: 4rem;
+    font-weight: 900;
+}
+#emphasis-home {
     font-size: 4rem;
     font-weight: 900;
 }
@@ -269,14 +307,14 @@ ul li:hover {
     /* justify-content: space-evenly; */
     justify-content: start;
     text-transform: uppercase;
-    color: var(--clr-background);
+    /* color: var(--clr-background); */
     cursor: pointer;
     pointer-events: none
 }
 .roles-group p {
     font-size: 0.8rem;
-    background: var(--clr-lightblue);
-    color: var(--clr-white);
+    background: var(--clr-card-role-background);
+    color: var(--clr-card-role-text);
     padding: 10px;
     border-radius: 5px;
     margin-right: 5px;
@@ -288,11 +326,13 @@ ul li:hover {
     margin: 0 auto; /* Center horizontally */
     top: 50%; /* Center vertically */
     transform: translateY(-50%); /* Adjust vertically to center */
-    border-style: none;
-    /* border-radius: 5px; */
+    border-style: solid;
+    border-width: 1px;
+    border-color: var(--clr-modal-border);
+    border-radius: 10px;
 
-    background-color: var(--clr-background);
-    color: var(--clr-black);
+    background-color: var(--clr-modal-background);
+    color: var(--clr-font-general);
 }
 .modal p {
     margin:0;
@@ -341,7 +381,7 @@ ul li:hover {
 }
 .info-group p {
     font-size: 0.8rem;
-    color: var(--clr-white);
+    /* color: var(--clr-white); */
     padding: 10px;
 }
 .photo-gallery-template {
@@ -372,25 +412,27 @@ ul li:hover {
     font-size: .8rem;
     margin-top: 10px;
     margin-bottom: 5px;
+    color: var(--clr-font-general);
 }
 #grid-comics p {
     font-size: .7rem;
     margin: 0;
+    color: var(--clr-font-general);
 }
 #comic-card p{
     position: absolute;
     font-size: 1.3rem;
     text-transform: uppercase;
-    color: var(--clr-background);
+    color: var(--clr-art-overlay-text);
     cursor: pointer;
     pointer-events: none
 }
 #comic-card button{
     outline: none;
-    background-color: var(--clr-lightblue);
+    background-color: var(--clr-brand-primary);
     width: 100%;
     height: 100%;
-    opacity: 25%;
+    opacity: 50%;
     border: none;
     padding: 0;
 }
@@ -405,11 +447,11 @@ ul li:hover {
 #hamburger-icon div {
     width: 35px;
     height: 3px;
-    background-color: white;
+    /* background-color: white; */
     margin: 6px 0;
     transition: 0.4s;
 
-    background-color: var(--clr-black);
+    background-color: var(--clr-dropdown);
 }
 .open .bar1 {
     -webkit-transform: rotate(-45deg) translate(-6px, 6px);
@@ -601,12 +643,3 @@ lite-youtube.lyt-activated > .lty-playbtn {
     }
 }
 
-/* Dark Mode */
-/* @media (prefers-color-scheme: dark) {
-    :root {
-        --clr-primary: #7AA8EA;
-        --clr-lite: #1a1a1a;
-        --clr-dark: #eaf5fd;
-        --clr-action-hover: #91bbf5;
-    }
-} */
