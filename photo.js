@@ -30,6 +30,7 @@ document.addEventListener('DOMContentLoaded', function () {
         { button: document.getElementById('popup_purple'), content: document.getElementById('info_purple') },
         { button: document.getElementById('popup_ftgwarehouse'), content: document.getElementById('info_ftgwarehouse') },
         { button: document.getElementById('popup_dudes-at-the-surfshop'), content: document.getElementById('info_dudes-at-the-surfshop') },
+        { button: document.getElementById('popup_portrait'), content: document.getElementById('info_portrait') },
     ];
 
     // Add event listeners to open the dialog when buttons are clicked
