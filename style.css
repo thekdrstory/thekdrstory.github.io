@@ -419,7 +419,9 @@ ul li:hover {
     margin: 0;
     color: var(--clr-font-general);
 }
-#comic-card p{
+.comic-card {
+}
+.comic-card p{
     position: absolute;
     font-size: 1.3rem;
     text-transform: uppercase;
@@ -427,7 +429,7 @@ ul li:hover {
     cursor: pointer;
     pointer-events: none
 }
-#comic-card button{
+.comic-card button{
     outline: none;
     background-color: var(--clr-brand-primary);
     width: 100%;
@@ -468,7 +470,7 @@ ul li:hover {
     border-color: var(--clr-brand-secondary);
     border-width: 3px;
 }
-#contact-column {
+.contact-column {
     display: flex;
     flex-direction: column;
 }
