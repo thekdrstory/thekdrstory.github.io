@@ -437,6 +437,54 @@ ul li:hover {
     padding: 0;
 }
 
+/* Contact */
+.container-contact {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+.container-contact label {
+    margin-bottom: 10px;
+}
+.container-contact input {
+    margin-bottom: 10px;
+    border-style: solid;
+    border-radius: 5px;
+    border-width: 1px;
+    height: 50px;
+    border-color: var(--clr-font-general);
+}
+.container-contact input:focus-within {
+    outline: none;
+    border-color: var(--clr-brand-secondary);
+    border-width: 3px;
+}
+.container-contact textarea {
+    border-style: solid;
+    border-color: var(--clr-font-general);
+}
+.container-contact textarea:focus-within {
+    outline: none;
+    border-color: var(--clr-brand-secondary);
+    border-width: 3px;
+}
+#contact-column {
+    display: flex;
+    flex-direction: column;
+}
+.contact-text {
+    background-color: var(--clr-background);
+    color: var(--clr-font-general);
+}
+#btn-contact-submit {
+    width: 100%;
+    margin-top: 10px;
+    border-style: none;
+}
+#firstName {
+    margin-right: 10px;
+}
+
 /*Mobile Users*/
 /*This creates the hamburger icon + mobile nav menu... credit to JavaScript Academy*/
 #hamburger-icon {
@@ -640,6 +688,14 @@ lite-youtube.lyt-activated > .lty-playbtn {
     }
     #comic-card p{
         font-size: .8rem;
+    }
+
+    /* Contact */
+    .container-contact {
+        width: 100%;
+    }
+    #firstName {
+        margin-right: 0px;
     }
 }
 
