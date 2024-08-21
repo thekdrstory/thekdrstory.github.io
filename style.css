@@ -6,6 +6,7 @@
     --clr-brand-secondary: #7425eb;
     --clr-background: #FFFFFF;
     --clr-font-general: #141414;
+    --clr-font-secondary: #959595;
     --clr-modal-background: #FFFFFF;
     --clr-modal-border: #1E293B;
     --clr-button-hover: #3876fa;
@@ -19,14 +20,15 @@
     
 }
 
-/* Dark Mode */
+/* Dark Mode 1C202F 09090B*/
 @media (prefers-color-scheme: dark) {
     :root {
         --clr-brand-primary: #2563eb;
         --clr-brand-secondary: #7425eb;
         --clr-background: #09090B;
         --clr-font-general: #F8FAFC;
-        --clr-modal-background: #020817;
+        --clr-font-secondary: #959595;
+        --clr-modal-background: #1C202F;
         --clr-modal-border: #1E293B;
         --clr-button-hover: #3876fa;
         --clr-button-text: #F8FAFC;
@@ -69,7 +71,7 @@ a {
 
 /*Header settings*/
 .top-bar {
-    /* background-color: var(--clr-darkblue); */
+    /* background-color: #141414; */
 }
 header {
     padding-left: 20px;
@@ -151,9 +153,16 @@ ul li:hover {
     padding-right: 20px;
     margin: 0 auto;
     margin-top: 20px;
+    margin-bottom: 20px;
 }
 .container-intro p {
-    margin: 0px;
+    margin-top: 0px;
+    margin-bottom: 5px;
+    margin-left: 0px;
+    margin-right: 0px;
+}
+#title-intro {
+    text-align: left;
 }
 .container-column {
     display: grid;
@@ -199,6 +208,7 @@ ul li:hover {
     position: relative;
     width: fit-content;
     overflow: hidden;
+    /* box-shadow: 2px 2px 5px #09090B; */
 }
 .container-card img {
     display: block;
@@ -216,15 +226,13 @@ ul li:hover {
     opacity: 0;
     transition: opacity 0.25s;
     color: var(--clr-card-text);
-
-
 }
 .overlay-card h2{
     position: absolute;
     font-size: 1.3rem;
     text-transform: uppercase;
     cursor: pointer;
-    pointer-events: none
+    pointer-events: none;
 }
 .overlay-card:hover {
     opacity: 1;
@@ -242,9 +250,6 @@ ul li:hover {
 }
 .btn-card:hover {
     cursor: pointer;
-}
-#title-intro {
-    text-align: center;
 }
 .clickable-links {
     text-decoration: underline;
@@ -269,6 +274,10 @@ ul li:hover {
 .emphasis {
     color: var(--clr-brand-primary);
 }
+.secondary-font {
+    color: var(--clr-font-secondary);
+}
+
 
 /*Home Page Specifics*/
 #home-page-container {
@@ -406,7 +415,8 @@ ul li:hover {
 
 /*Art*/
 #grid-comics {
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
 }
 #grid-comics h2 {
     font-size: .8rem;
@@ -417,19 +427,28 @@ ul li:hover {
 #grid-comics p {
     font-size: .7rem;
     margin: 0;
-    color: var(--clr-font-general);
+    /* color: var(--clr-font-secondary); */
 }
-.comic-card {
+.btn-card-art {
+    outline: none;
+    width: 100%;
+    height: 100%;
 }
 .comic-card p{
     position: absolute;
     font-size: 1.3rem;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-radius: 5px;
     text-transform: uppercase;
     color: var(--clr-art-overlay-text);
+    background-color: var(--clr-card-background);
     cursor: pointer;
-    pointer-events: none
+    pointer-events: none;
 }
-.comic-card button{
+/* .comic-card button{
     outline: none;
     background-color: var(--clr-brand-primary);
     width: 100%;
@@ -437,7 +456,7 @@ ul li:hover {
     opacity: 50%;
     border: none;
     padding: 0;
-}
+} */
 
 /* Contact */
 .container-contact {
