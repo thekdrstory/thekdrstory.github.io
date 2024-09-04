@@ -69,6 +69,20 @@
         <!--Portfolio-->
         <div class="grid-template">
 
+            <!--Socko-->
+            <div class="container-card">
+                <div class="overlay-card">
+                    <button class="btn-card" id="popup_socko"></button>
+                    <h2>Socko</h2>
+                    <div class="roles-group">
+                        <p>Editor</p>
+                    </div>
+                </div>
+                <div class="blur-load" style="background-image: url(icons/loading-image.png);">
+                    <img src="thumbnails/thumbnail_video_socko.webp" alt="Socko Puppet">
+                </div>
+            </div>
+
             <!--PURPLE-->
             <div class="container-card">
                 <div class="overlay-card">
@@ -251,6 +265,15 @@
         <!--Depending on which image is clicked, 
             this will open the corresponding information-->
         <dialog class="modal" id="modal">
+
+            <!--SOCKO Info-->
+            <div id="info_socko">
+                <lite-youtube videoid="UdZ-B2ORgGc" params="controls=1"></lite-youtube>
+                <h3>Description:</h3>
+                <p>Talking about Nintendo games</p>
+                <h3>My Role(s):</h3>
+                <p>Editor</p>
+            </div>
 
             <!--PURPLE Info-->
             <div id="info_purple">
